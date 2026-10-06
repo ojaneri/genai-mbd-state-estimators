@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "Generative AI and ML-based MBD for automotive state estimators: code, results and pre-registrations"
+version: 1.0.0
+date-released: 2026-10-06
+license: MIT
+repository-code: "https://github.com/ojaneri/genai-mbd-state-estimators"
+authors:
+  - family-names: Dominguez
+    given-names: Rafael Santos
+    affiliation: "Federal Technological University of Paraná — Ponta Grossa"
+  - family-names: Janeri Filho
+    given-names: Osvaldo
+    affiliation: "Federal Technological University of Paraná — Ponta Grossa"
+  - family-names: Dias Santos
+    given-names: Max Mauro
+    affiliation: "Federal Technological University of Paraná — Ponta Grossa"
+keywords: [generative AI, synthetic data, diffusion models, model-based design, state of charge, battery energy storage, fuel level estimation]

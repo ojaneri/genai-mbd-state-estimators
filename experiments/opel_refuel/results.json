@@ -1,0 +1,126 @@
+{
+ "n_refuels_file": 22,
+ "n_observable": 21,
+ "date_mismatches": [
+  {
+   "lp": 1,
+   "file_date": "2025-05-15",
+   "log_end": "2025-05-12 21:41:24.761846"
+  }
+ ],
+ "level_quantum_pct": 0.0,
+ "max_within_trip_rise_pct": 0.7843137254902217,
+ "detector_sweep": [
+  {
+   "threshold": 1,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 2,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 3,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 5,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 8,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 10,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 15,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 20,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 30,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 40,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  {
+   "threshold": 50,
+   "detections": 21,
+   "TP": 21,
+   "FN": 0,
+   "FP": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  }
+ ],
+ "capacity_fit_L_per_100pct": 43.13,
+ "level_based_litres_LOO": {
+  "MAE_L": 0.55,
+  "max_abs_L": 1.66,
+  "MAE_pct_of_pump": 1.52
+ },
+ "consumption_integration_vs_pump": {
+  "n": 22,
+  "MAE_L": 0.6,
+  "max_abs_L": 2.04,
+  "mean_signed_L": -0.02
+ }
+}

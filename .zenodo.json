@@ -1,0 +1,43 @@
+{
+  "title": "Generative AI and ML-based MBD for automotive state estimators: code, results and pre-registrations",
+  "upload_type": "software",
+  "description": "Code, per-seed results and pre-registration records of the evaluation of a generative-AI and machine-learning model-based design pipeline for automotive state estimators on public data: vehicle fuel flow (two cars), battery-cell state of charge and a field battery energy storage system (state of charge and cell temperature). Includes the data-reduction protocol, generators (DDPM, TimeGAN, recurrent VAE, VAR, block bootstrap), physical audits, physics-structured and hybrid models, the utility gate, and the context-gating test of refuel detection.",
+  "creators": [
+    {
+      "name": "Dominguez, Rafael Santos",
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa"
+    },
+    {
+      "name": "Janeri Filho, Osvaldo",
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa"
+    },
+    {
+      "name": "Dias Santos, Max Mauro",
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "generative AI",
+    "synthetic data",
+    "diffusion models",
+    "model-based design",
+    "state of charge",
+    "battery energy storage",
+    "fuel level estimation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20094787",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.17632/cp3473x7xv.3",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "grants": [],
+  "notes": "This study was financed in part by CAPES (Brazil)."
+}

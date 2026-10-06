@@ -1,0 +1,7 @@
+numpy
+pandas>=2.2
+scikit-learn
+torch
+matplotlib
+h5py      # tools/convert_bess.py
+mat-io    # tools/convert_bess.py (MATLAB v7.3 files)

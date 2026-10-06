@@ -1,0 +1,6 @@
+Results, reports, pre-registration records and data tables in this repository (everything that is not source code:
+experiments/**/results.json, *.log, *.md, *.csv, *.json, data/, PREREGISTRATION.md, REPRODUCE.md) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 Rafael Santos Dominguez, Osvaldo Janeri Filho, Max Mauro Dias Santos.
+data/thesis_vf_curves/ reproduces tables of R. S. Dominguez, MEng thesis, UTFPR, 2026 (CC BY 4.0).
