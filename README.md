@@ -1,5 +1,7 @@
 # Generative AI and ML-based MBD for automotive state estimators — code, results and pre-registrations
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23190825.svg)](https://doi.org/10.5281/zenodo.23190825)
+
 Companion repository of the paper *"A Generative-AI and Machine-Learning Model-Based Design Pipeline for Agile Development
 of Automotive State Estimators: Fuel-Level, Battery-Cell and Field BESS Case Studies"* (R. S. Dominguez, O. Janeri Filho,
 M. M. Dias Santos; Federal Technological University of Paraná — Ponta Grossa).
@@ -64,7 +66,7 @@ Measurement in Passenger Vehicles*, MEng thesis, UTFPR, 2026 (CC BY 4.0).
 
 ## Citation
 
-See `CITATION.cff`. Please cite the paper and this archive (DOI on the Zenodo record of the release).
+See `CITATION.cff`. Please cite the paper and this archive: doi:10.5281/zenodo.23190825 (v1.0.0; all versions: doi:10.5281/zenodo.23190824).
 
 ## Acknowledgment
 

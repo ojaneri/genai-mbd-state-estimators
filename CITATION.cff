@@ -4,6 +4,7 @@ title: "Generative AI and ML-based MBD for automotive state estimators: code, re
 version: 1.0.0
 date-released: 2026-10-06
 license: MIT
+doi: 10.5281/zenodo.23190825
 repository-code: "https://github.com/ojaneri/genai-mbd-state-estimators"
 authors:
   - family-names: Dominguez
