@@ -2,7 +2,7 @@
 
 Commands copied verbatim from the job queue that drove the experiments (comments in Portuguese kept; lines with server
 addresses removed). Run from `experiments/data_reduction/` with the converted datasets in `../data*` (see README).
-Each job wrote `out/<name>/results.json`, archived here under `desktop_results/<job>/`.
+Each job wrote `out/<name>/results.json`, archived here under `desktop_results/<job>/`. Jobs marked "REFAZ" re-run a failed job.
 
 
 ## J001 — TimeGAN, grade completa (variantes de proporção/peso/filtro/pré-treino), frações escassas
@@ -167,3 +167,39 @@ Each job wrote `out/<name>/results.json`, archived here under `desktop_results/<
 
 ## J035c — REFAZ J035b (mesma causa)
     python -u run3.py ../data_besstemp out/J035c_besstemp --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain bess_temp --seeds 0,1,2,3,4 --fracs 0.01,0.02,0.05,0.1 --variants real,gen_rfill_w0.3,physonly,genphys_rfill_w0.3,hyb_resid_w0.3,hyb_feat_real,hyb_feat_w0.3,aug_rfill_w0.3
+
+## J038 — d-0030: MLP como modelo final, sementes 3–4 (completa 5 sementes com o J019; t-0016)
+    python -u run3.py ../data out/J038_mlp --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --model mlp --seeds 3,4 --fracs 0.01,0.02,0.05,0.1 --variants real,gen_rfill_w0.3,gen_rfill_w1,genphys_rfill_w0.3,aug_rfill_w0.3
+
+## J039 — d-0030: veículo 2 (Itabira), controle bootstrap de blocos reais como gerador, sementes 0–4
+    python -u run3.py ../data_itabira out/J039_ita_boot --gen bootstrap --post none --res-auto --seeds 0,1,2,3,4 --fracs 0.01,0.02,0.05,0.1 --variants real,gen_rfill_w0.3,physonly,hyb_resid_w0.3
+
+## J040 — d-0030: BESS temperatura de célula, controle bootstrap, sementes 0–4
+    python -u run3.py ../data_besstemp out/J040_besstemp_boot --gen bootstrap --post none --domain bess_temp --seeds 0,1,2,3,4 --fracs 0.01,0.02,0.05,0.1 --variants real,gen_rfill_w0.3,physonly,hyb_resid_w0.3
+
+## J044 — d-0033: teto com 100 % dos dados para os modelos com física (rápido; sem sintético porque o preenchimento é zero)
+    python -u run3.py ../data_lghg2 out/J044a_cell_full --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --seeds 0 --fracs 1.0 --variants real,physonly,hyb_feat_real --no-ceiling
+    python -u run3.py ../data_bess out/J044b_bess_full --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --test-segs 7-8 --pool-segs 1-6 --seeds 0 --fracs 1.0 --variants real,physonly,hyb_feat_real --no-ceiling
+
+## J044r — REFAZ J044 (falhou rc=1: pool de aumento vazio com fração 1,0; run3.py corrigido, hash cdffce07f3c20f45); mesmo d-0033
+    python -u run3.py ../data_lghg2 out/J044a_cell_full --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --seeds 0 --fracs 1.0 --variants real,physonly,hyb_feat_real --no-ceiling
+    python -u run3.py ../data_bess out/J044b_bess_full --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --test-segs 7-8 --pool-segs 1-6 --seeds 0 --fracs 1.0 --variants real,physonly,hyb_feat_real --no-ceiling
+
+## J036 — d-0030: veículo 2 (Itabira), PORTÃO DE UTILIDADE, sementes 5–9
+    python -u run3.py ../data_itabira out/J036_ita_auto --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --res-auto --auto-select --seeds 5,6,7,8,9 --fracs 0.01,0.02,0.05,0.1 --variants real,gen_rfill_w0.3,physonly,genphys_rfill_w0.3,hyb_resid_w0.3,hyb_feat_real,hyb_feat_w0.3
+
+## J037 — d-0030: BESS temperatura de célula, PORTÃO DE UTILIDADE, sementes 5–9
+    python -u run3.py ../data_besstemp out/J037_besstemp_auto --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain bess_temp --auto-select --seeds 5,6,7,8,9 --fracs 0.01,0.02,0.05,0.1 --variants real,gen_rfill_w0.3,physonly,genphys_rfill_w0.3,hyb_resid_w0.3,hyb_feat_real,hyb_feat_w0.3
+
+## J043 — d-0032: exportar janelas reais/sintéticas para a figura do artigo (semente 0, fração 5 %, 5 domínios) — rápido
+    python -u run3.py ../data out/J043_win_veh1 --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --save-windows --seeds 0 --fracs 0.05 --variants real,gen_rfill_w0.3 --no-ceiling
+    python -u run3.py ../data_itabira out/J043_win_veh2 --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --res-auto --save-windows --seeds 0 --fracs 0.05 --variants real,gen_rfill_w0.3 --no-ceiling
+    python -u run3.py ../data_lghg2 out/J043_win_cell --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --save-windows --seeds 0 --fracs 0.05 --variants real,gen_rfill_w0.3 --no-ceiling
+    python -u run3.py ../data_bess out/J043_win_bess --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --test-segs 7-8 --pool-segs 1-6 --save-windows --seeds 0 --fracs 0.05 --variants real,gen_rfill_w0.3 --no-ceiling
+    python -u run3.py ../data_besstemp out/J043_win_besstemp --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain bess_temp --save-windows --seeds 0 --fracs 0.05 --variants real,gen_rfill_w0.3 --no-ceiling
+
+## J041 — d-0032: célula (LG HG2), curva longa 20/30/50 %, sementes 0–4
+    python -u run3.py ../data_lghg2 out/J041_cell_long --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --seeds 0,1,2,3,4 --fracs 0.2,0.3,0.5 --variants real,gen_rfill_w0.3,physonly,hyb_resid_w0.3,hyb_feat_w0.3
+
+## J042 — d-0032: BESS SOC, curva longa 20/30/50 %, sementes 0–4
+    python -u run3.py ../data_bess out/J042_bess_long --gen ddpm --iters 50000 --hidden 128 --dequant --post quant --domain battery --test-segs 7-8 --pool-segs 1-6 --seeds 0,1,2,3,4 --fracs 0.2,0.3,0.5 --variants real,gen_rfill_w0.3,physonly,hyb_resid_w0.3,hyb_feat_w0.3

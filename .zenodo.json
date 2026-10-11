@@ -1,19 +1,27 @@
 {
-  "title": "Generative AI and ML-based MBD for automotive state estimators: code, results and pre-registrations",
+  "title": "Physics-Guided Generative AI for Automotive State Estimation and Embedded Deployment: code, results and preregistrations",
   "upload_type": "software",
   "description": "Code, per-seed results and pre-registration records of the evaluation of a generative-AI and machine-learning model-based design pipeline for automotive state estimators on public data: vehicle fuel flow (two cars), battery-cell state of charge and a field battery energy storage system (state of charge and cell temperature). Includes the data-reduction protocol, generators (DDPM, TimeGAN, recurrent VAE, VAR, block bootstrap), physical audits, physics-structured and hybrid models, the utility gate, and the context-gating test of refuel detection.",
   "creators": [
     {
       "name": "Dominguez, Rafael Santos",
-      "affiliation": "Federal Technological University of Paraná — Ponta Grossa"
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa",
+      "orcid": "0009-0007-2827-618X"
     },
     {
       "name": "Janeri Filho, Osvaldo",
-      "affiliation": "Federal Technological University of Paraná — Ponta Grossa"
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa",
+      "orcid": "0009-0000-5869-4947"
+    },
+    {
+      "name": "de Lima, Jeferson José",
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa",
+      "orcid": "0000-0001-6342-6162"
     },
     {
       "name": "Dias Santos, Max Mauro",
-      "affiliation": "Federal Technological University of Paraná — Ponta Grossa"
+      "affiliation": "Federal Technological University of Paraná — Ponta Grossa",
+      "orcid": "0000-0001-7877-3554"
     }
   ],
   "license": "MIT",
@@ -23,6 +31,7 @@
     "diffusion models",
     "model-based design",
     "state of charge",
+    "battery management system",
     "battery energy storage",
     "fuel level estimation"
   ],
@@ -39,5 +48,6 @@
     }
   ],
   "grants": [],
-  "notes": "This study was financed in part by CAPES (Brazil)."
+  "notes": "This study was financed in part by CAPES (Brazil).",
+  "version": "1.1.0"
 }

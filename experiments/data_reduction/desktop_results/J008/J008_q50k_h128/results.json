@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "round": 3,
+  "gen": "ddpm",
+  "post": "quant",
+  "dequant": true,
+  "model": "hgb",
+  "mode": "validation",
+  "test_segments": [
+   15,
+   16,
+   17
+  ],
+  "pool_trips": 151,
+  "iters": 50000,
+  "hidden": 128,
+  "latent": 16,
+  "seeds": [
+   0,
+   1
+  ],
+  "fracs": [
+   0.05
+  ],
+  "torch": "2.14.1+cu126",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "audit_limits": {
+   "dspeed": 12.0,
+   "drpm": 1282.25,
+   "idle_lo": 7.7,
+   "idle_hi": 30.897000000000116,
+   "ratio_hi": 0.0950057528922601
+  },
+  "runtime_s": 897.7993624210358
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "frac": 0.05,
+   "n_real": 2983,
+   "n_fill": 55054,
+   "n_syn_audited": 87528,
+   "audit_pass": 0.9716049108629532,
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.07022234797477722
+   },
+   "gen_seconds": 308.23436093330383,
+   "discr_gen_vs_test": 0.252,
+   "discr_aug_vs_test": 0.485375,
+   "discr_realtrain_vs_test": 0.1329181532136794,
+   "v": {
+    "real": {
+     "flow_MAE": 2.6006392722119966,
+     "litres_MAE": 0.17851463885126387
+    },
+    "gen_r0.5_w1": {
+     "flow_MAE": 2.59747174871781,
+     "litres_MAE": 0.45487099994937097,
+     "n_syn": 1491
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 2.593179784314575,
+     "litres_MAE": 0.5896455897964827,
+     "n_syn": 2983
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 2.601120107752359,
+     "litres_MAE": 0.8894404213495216,
+     "n_syn": 55054
+    }
+   },
+   "discr_dq_gen_vs_test": 0.25475000000000003,
+   "discr_dq_realtrain_vs_test": 0.12989900606693705,
+   "discr_channels_gen": {
+    "SPEED": 0.1626257708034058,
+    "RPM": 0.1673753646510615,
+    "THROTTLE_POS": 0.1802495055709935,
+    "REAL_FUEL_USAGE_ML_MIN": 0.16312514574087844
+   },
+   "discr_channels_realtrain": {
+    "SPEED": 0.062016897766690615,
+    "RPM": 0.08649121138764881,
+    "THROTTLE_POS": 0.057826260394611695,
+    "REAL_FUEL_USAGE_ML_MIN": 0.04140268121212609
+   },
+   "repeat_frac_real": [
+    0.42871926423647044,
+    0.005626084041452288,
+    0.31914180355346966,
+    0.022708391027416227
+   ],
+   "repeat_frac_gen": [
+    0.28479333818147134,
+    0.0034428734357800535,
+    0.1442574401036389,
+    0.008266174699872439
+   ],
+   "success_fidelity": false
+  },
+  {
+   "seed": 1,
+   "frac": 0.05,
+   "n_real": 3360,
+   "n_fill": 54677,
+   "n_syn_audited": 86276,
+   "audit_pass": 0.964160790317714,
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.07683264464139938
+   },
+   "gen_seconds": 306.38124656677246,
+   "discr_gen_vs_test": 0.25012499999999993,
+   "discr_aug_vs_test": 0.47862499999999986,
+   "discr_realtrain_vs_test": 0.15803571428571428,
+   "v": {
+    "real": {
+     "flow_MAE": 2.720804733926438,
+     "litres_MAE": 0.35353127082795294
+    },
+    "gen_r0.5_w1": {
+     "flow_MAE": 2.7035071051765267,
+     "litres_MAE": 0.35106050372870595,
+     "n_syn": 1680
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 2.6249837912165086,
+     "litres_MAE": 0.3234388464453275,
+     "n_syn": 3360
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 2.5255979309705725,
+     "litres_MAE": 0.31195120694420336,
+     "n_syn": 54677
+    }
+   },
+   "discr_dq_gen_vs_test": 0.24687499999999996,
+   "discr_dq_realtrain_vs_test": 0.15818452380952386,
+   "discr_channels_gen": {
+    "SPEED": 0.16749983333853713,
+    "RPM": 0.17662533368625244,
+    "THROTTLE_POS": 0.18987653737581367,
+    "REAL_FUEL_USAGE_ML_MIN": 0.17650044307102275
+   },
+   "discr_channels_realtrain": {
+    "SPEED": 0.08169642857142856,
+    "RPM": 0.10193452380952372,
+    "THROTTLE_POS": 0.09285714285714286,
+    "REAL_FUEL_USAGE_ML_MIN": 0.0854166666666667
+   },
+   "repeat_frac_real": [
+    0.3919125258799172,
+    0.004050207039337474,
+    0.28175465838509317,
+    0.0265916149068323
+   ],
+   "repeat_frac_gen": [
+    0.27856656191353535,
+    0.0029919147246349935,
+    0.15150215587185312,
+    0.008537816955493693
+   ],
+   "success_fidelity": false
+  }
+ ]
+}

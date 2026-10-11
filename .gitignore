@@ -1,4 +1,7 @@
 __pycache__/
 *.pyc
-out/
-data_*/
+# saídas locais dos jobs e pastas de dados convertidos (fora do repositório)
+experiments/data_reduction/out/
+/data_*/
+.env
+.env.*

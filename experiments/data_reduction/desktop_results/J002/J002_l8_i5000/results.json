@@ -1,0 +1,70 @@
+{
+ "meta": {
+  "round": 2,
+  "gen": "timevae",
+  "model": "hgb",
+  "mode": "validation",
+  "test_segments": [
+   15,
+   16,
+   17
+  ],
+  "pool_trips": 151,
+  "iters": 5000,
+  "hidden": 48,
+  "latent": 8,
+  "seeds": [
+   0
+  ],
+  "fracs": [
+   0.05
+  ],
+  "torch": "2.14.1+cu126",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "audit_limits": {
+   "dspeed": 12.0,
+   "drpm": 1282.25,
+   "idle_lo": 7.7,
+   "idle_hi": 30.897000000000116,
+   "ratio_hi": 0.0950057528922601
+  },
+  "runtime_s": 52.24018931388855
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "frac": 0.05,
+   "n_real": 2983,
+   "n_fill": 55054,
+   "n_syn_audited": 90086,
+   "audit_pass": 1.0,
+   "gen_log": {
+    "device": "cuda",
+    "gen": "timevae",
+    "rec": 1.8724303245544434,
+    "kl": 0.896757185459137
+   },
+   "gen_seconds": 21.438451528549194,
+   "discr_gen_vs_test": 0.49924999999999997,
+   "discr_aug_vs_test": 0.485375,
+   "discr_realtrain_vs_test": 0.1329181532136794,
+   "v": {
+    "real": {
+     "flow_MAE": 2.6006392722119966,
+     "litres_MAE": 0.17851463885126387
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 2.7518574567319285,
+     "litres_MAE": 0.23260179366495967,
+     "n_syn": 2983
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 2.9090494669881033,
+     "litres_MAE": 0.12452320241353239,
+     "n_syn": 55054
+    }
+   }
+  }
+ ]
+}

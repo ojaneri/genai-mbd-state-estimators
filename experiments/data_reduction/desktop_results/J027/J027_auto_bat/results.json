@@ -1,0 +1,2478 @@
+{
+ "meta": {
+  "round": 3,
+  "domain": "battery",
+  "battery_meta": null,
+  "dataset": "data_lghg2",
+  "res_sensor": [
+   3.000000000030756e-06,
+   2.9999999999752447e-06,
+   0.003824000000001604,
+   2.0000000000575113e-06
+  ],
+  "gen": "ddpm",
+  "cond_speed": false,
+  "post": "quant",
+  "dequant": true,
+  "model": "hgb",
+  "mode": "test",
+  "test_segments": [
+   9,
+   10,
+   11,
+   12
+  ],
+  "pool_segments": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "hw_absent": false,
+  "auto_select": true,
+  "pretrain_src": null,
+  "pretrain_temps": null,
+  "pretrain_iters": null,
+  "temps": null,
+  "pool_trips": 552,
+  "iters": 50000,
+  "hidden": 128,
+  "latent": 16,
+  "seeds": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "fracs": [
+   0.01,
+   0.02,
+   0.05,
+   0.1
+  ],
+  "torch": "2.14.1+cu126",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "audit_limits": {
+   "cc_win": 0.01,
+   "dv": 0.36499746500000063,
+   "di": 8.406738972828302,
+   "dt_win": 1.0,
+   "i_max": 20.0
+  },
+  "runtime_s": 10209.681502819061
+ },
+ "runs": [
+  {
+   "seed": 5,
+   "frac": 0.01,
+   "n_real": 690,
+   "n_fill": 75665,
+   "n_syn_audited": 121999,
+   "audit_tiers": [
+    1.0,
+    0.9982529415588637,
+    0.9958558148605604,
+    0.9994068127153352,
+    0.9976109991549112
+   ],
+   "audit_pass": 0.9913459663264643,
+   "audit_pass_real": 0.991304347826087,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.991304347826087,
+    1.0,
+    1.0
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.024291954934597015
+   },
+   "gen_seconds": 295.64857363700867,
+   "discr_gen_vs_test": 0.49187499999999995,
+   "discr_aug_vs_test": 0.49912499999999993,
+   "discr_realtrain_vs_test": 0.47608695652173905,
+   "v": {
+    "real": {
+     "flow_MAE": 0.12471674945105608,
+     "flow_MAE_hw": 0.1383091980680826,
+     "val_MAE": 0.029371464432559228,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.1124247911407614,
+     "flow_MAE_hw": 0.12598718911237608,
+     "val_MAE": 0.014938450114210683,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "physonly": {
+     "flow_MAE": 0.05899526381717039,
+     "flow_MAE_hw": 0.07621797568315956,
+     "val_MAE": 0.012779871533027625,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.06181889179509259,
+     "flow_MAE_hw": 0.07335075039829426,
+     "val_MAE": 0.011169527269305556,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.09286030742049861,
+     "flow_MAE_hw": 0.10168268626036363,
+     "val_MAE": 0.025193342595518538,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.08947939526769629,
+     "flow_MAE_hw": 0.09731374081390137,
+     "val_MAE": 0.015916063823557505,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.1103276290056283,
+     "flow_MAE_hw": 0.12159725944542109,
+     "val_MAE": 0.015918208532001318,
+     "litres_MAE": null,
+     "n_syn": 75665
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4917499999999999,
+   "discr_boot_ref": 0.4962500000000001,
+   "discr_dq_realtrain_vs_test": 0.47608695652173905,
+   "discr_channels_gen": {
+    "CURRENT": 0.38637523085308256,
+    "VOLTAGE": 0.35975168332765606,
+    "TEMP": 0.4617490143064451,
+    "SOC": 0.3775000743061655
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.17391304347826075,
+    "VOLTAGE": 0.253623188405797,
+    "TEMP": 0.3652173913043478,
+    "SOC": 0.35652173913043483
+   },
+   "repeat_frac_real": [
+    0.02747321991178324,
+    0.035034656584751106,
+    0.7860743541272842,
+    0.0015122873345935729
+   ],
+   "repeat_frac_gen": [
+    4.811158466373744e-05,
+    0.00010620186836884265,
+    0.020707226039272594,
+    0.0007608758019042922
+   ],
+   "discr_id_gen": 0.48762499999999986,
+   "discr_id_real": 0.4746376811594203,
+   "discr_id_boot": 0.4956250000000001,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4967499999999999,
+   "discr_id_dyn_real": 0.14782608695652177,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.06181889179509259,
+   "n_val": 150
+  },
+  {
+   "seed": 5,
+   "frac": 0.02,
+   "n_real": 1250,
+   "n_fill": 75105,
+   "n_syn_audited": 121256,
+   "audit_tiers": [
+    1.0,
+    0.9982810555955733,
+    1.0,
+    0.9999836291009102,
+    0.9942374435203981
+   ],
+   "audit_pass": 0.9925348700150612,
+   "audit_pass_real": 0.9808,
+   "audit_tiers_real": [
+    1.0,
+    0.9952,
+    1.0,
+    1.0,
+    0.9856
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.031570106744766235
+   },
+   "gen_seconds": 301.3619110584259,
+   "discr_gen_vs_test": 0.48124999999999996,
+   "discr_aug_vs_test": 0.497625,
+   "discr_realtrain_vs_test": 0.47639999999999993,
+   "v": {
+    "real": {
+     "flow_MAE": 0.08248565792398632,
+     "flow_MAE_hw": 0.09719679383906081,
+     "val_MAE": 0.021057337995469556,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.07033863116258403,
+     "flow_MAE_hw": 0.07826680555688686,
+     "val_MAE": 0.021361604477592368,
+     "litres_MAE": null,
+     "n_syn": 75105
+    },
+    "physonly": {
+     "flow_MAE": 0.036814562251241155,
+     "flow_MAE_hw": 0.04867768024706521,
+     "val_MAE": 0.0250982673345387,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.03121457221323649,
+     "flow_MAE_hw": 0.03732625214639562,
+     "val_MAE": 0.012754010273529657,
+     "litres_MAE": null,
+     "n_syn": 75105
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.0594995655581333,
+     "flow_MAE_hw": 0.06831471758916385,
+     "val_MAE": 0.023929325280627568,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.05811158191326452,
+     "flow_MAE_hw": 0.0590661707372833,
+     "val_MAE": 0.01689785975231688,
+     "litres_MAE": null,
+     "n_syn": 75105
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.06667465421798521,
+     "flow_MAE_hw": 0.07897272448242679,
+     "val_MAE": 0.0274663088011184,
+     "litres_MAE": null,
+     "n_syn": 75105
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4801249999999999,
+   "discr_boot_ref": 0.49087499999999995,
+   "discr_dq_realtrain_vs_test": 0.47119999999999995,
+   "discr_channels_gen": {
+    "CURRENT": 0.3212498850246869,
+    "VOLTAGE": 0.20749933452616987,
+    "TEMP": 0.45150001411113927,
+    "SOC": 0.2667494301396872
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.06439986066368997,
+    "VOLTAGE": 0.1236081962761123,
+    "TEMP": 0.2416040756830311,
+    "SOC": 0.2891972136576454
+   },
+   "repeat_frac_real": [
+    0.13693913043478262,
+    0.04761739130434783,
+    0.8046608695652174,
+    0.10772173913043478
+   ],
+   "repeat_frac_gen": [
+    0.00011976099434613366,
+    0.0006407571763369487,
+    0.02523263752434662,
+    0.0014633072393011122
+   ],
+   "discr_id_gen": 0.4766250000000001,
+   "discr_id_real": 0.4667999999999999,
+   "discr_id_boot": 0.48750000000000004,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49712499999999993,
+   "discr_id_dyn_real": 0.11040000000000005,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.03121457221323649,
+   "n_val": 271
+  },
+  {
+   "seed": 5,
+   "frac": 0.05,
+   "n_real": 3176,
+   "n_fill": 73179,
+   "n_syn_audited": 116412,
+   "audit_tiers": [
+    1.0,
+    0.9988831600691936,
+    0.99872361150765,
+    0.9985892548242447,
+    0.9811396805669852
+   ],
+   "audit_pass": 0.9775456392858942,
+   "audit_pass_real": 0.9593828715365239,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9845717884130982,
+    1.0,
+    0.9729219143576826
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.040478743612766266
+   },
+   "gen_seconds": 289.6599452495575,
+   "discr_gen_vs_test": 0.46824999999999994,
+   "discr_aug_vs_test": 0.49875,
+   "discr_realtrain_vs_test": 0.4469462324290502,
+   "v": {
+    "real": {
+     "flow_MAE": 0.0587587335289871,
+     "flow_MAE_hw": 0.08114834346006128,
+     "val_MAE": 0.024756608835084126,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.042619839418373745,
+     "flow_MAE_hw": 0.06703163027163453,
+     "val_MAE": 0.01419009398013612,
+     "litres_MAE": null,
+     "n_syn": 73179
+    },
+    "physonly": {
+     "flow_MAE": 0.03198252066978429,
+     "flow_MAE_hw": 0.04951737643617033,
+     "val_MAE": 0.01041164366228723,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.031506931779084354,
+     "flow_MAE_hw": 0.04940372623467058,
+     "val_MAE": 0.011012076045978939,
+     "litres_MAE": null,
+     "n_syn": 73179
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.040456647949247665,
+     "flow_MAE_hw": 0.06028264469087497,
+     "val_MAE": 0.014681629901225212,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.032461971670153106,
+     "flow_MAE_hw": 0.050991056111527266,
+     "val_MAE": 0.011117625234107116,
+     "litres_MAE": null,
+     "n_syn": 73179
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.04199125741421489,
+     "flow_MAE_hw": 0.06592216061803954,
+     "val_MAE": 0.013229163336971562,
+     "litres_MAE": null,
+     "n_syn": 73179
+    }
+   },
+   "discr_dq_gen_vs_test": 0.458375,
+   "discr_boot_ref": 0.4710000000000001,
+   "discr_dq_realtrain_vs_test": 0.446316063363834,
+   "discr_channels_gen": {
+    "CURRENT": 0.2896263998508064,
+    "VOLTAGE": 0.1401244105552072,
+    "TEMP": 0.43012402894499413,
+    "SOC": 0.16762505211979783
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.06517476447464488,
+    "VOLTAGE": 0.13066733930950625,
+    "TEMP": 0.18340787566039507,
+    "SOC": 0.22024793222543526
+   },
+   "repeat_frac_real": [
+    0.12285072828824882,
+    0.03911126930237652,
+    0.8146561165261198,
+    0.09276092432373234
+   ],
+   "repeat_frac_gen": [
+    0.0003230654541814754,
+    0.002740267326392468,
+    0.020761717378605823,
+    0.003710210661085291
+   ],
+   "discr_id_gen": 0.45587500000000003,
+   "discr_id_real": 0.4384437822534182,
+   "discr_id_boot": 0.4661250000000001,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49462499999999987,
+   "discr_id_dyn_real": 0.07666825675114763,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "physonly",
+   "auto_test_MAE": 0.03198252066978429,
+   "n_val": 689
+  },
+  {
+   "seed": 5,
+   "frac": 0.1,
+   "n_real": 5962,
+   "n_fill": 70393,
+   "n_syn_audited": 110878,
+   "audit_tiers": [
+    1.0,
+    0.9990490979516349,
+    0.9901071291482011,
+    0.9997033883518861,
+    0.9769951495271662
+   ],
+   "audit_pass": 0.9672854799874376,
+   "audit_pass_real": 0.9550486413955048,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9693056021469305,
+    1.0,
+    0.983059376048306
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.04483005031943321
+   },
+   "gen_seconds": 282.51312470436096,
+   "discr_gen_vs_test": 0.43125,
+   "discr_aug_vs_test": 0.4970000000000001,
+   "discr_realtrain_vs_test": 0.4032499999999999,
+   "v": {
+    "real": {
+     "flow_MAE": 0.03973558291844816,
+     "flow_MAE_hw": 0.05402636000228867,
+     "val_MAE": 0.017922718979429986,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.02580707093816634,
+     "flow_MAE_hw": 0.03512373210484228,
+     "val_MAE": 0.013580735979701214,
+     "litres_MAE": null,
+     "n_syn": 70393
+    },
+    "physonly": {
+     "flow_MAE": 0.019320165407155476,
+     "flow_MAE_hw": 0.025080908753707686,
+     "val_MAE": 0.012197469829203146,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.017631010988547913,
+     "flow_MAE_hw": 0.023374268768468584,
+     "val_MAE": 0.011167463839989731,
+     "litres_MAE": null,
+     "n_syn": 70393
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.027116259111392295,
+     "flow_MAE_hw": 0.03718622393412258,
+     "val_MAE": 0.01484033982487856,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.019295747024227303,
+     "flow_MAE_hw": 0.02651914220379775,
+     "val_MAE": 0.011755904978906584,
+     "litres_MAE": null,
+     "n_syn": 70393
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.02552457480839298,
+     "flow_MAE_hw": 0.03430540668551987,
+     "val_MAE": 0.013347602439867752,
+     "litres_MAE": null,
+     "n_syn": 70393
+    }
+   },
+   "discr_dq_gen_vs_test": 0.42125,
+   "discr_boot_ref": 0.45899999999999996,
+   "discr_dq_realtrain_vs_test": 0.40400000000000014,
+   "discr_channels_gen": {
+    "CURRENT": 0.26775160231752737,
+    "VOLTAGE": 0.09900094071136822,
+    "TEMP": 0.3779993554819151,
+    "SOC": 0.1363752542935135
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.06112500191039505,
+    "VOLTAGE": 0.08487587776209138,
+    "TEMP": 0.1599998331041328,
+    "SOC": 0.1752501304928783
+   },
+   "repeat_frac_real": [
+    0.12077213657512069,
+    0.04153843909980602,
+    0.8072356810524627,
+    0.08729927220220819
+   ],
+   "repeat_frac_gen": [
+    0.0010344311060256593,
+    0.001301861740714628,
+    0.027388896687859824,
+    0.004850219238222661
+   ],
+   "discr_id_gen": 0.4096249999999999,
+   "discr_id_real": 0.36975,
+   "discr_id_boot": 0.43437499999999996,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49287499999999995,
+   "discr_id_dyn_real": 0.05325000000000002,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.017631010988547913,
+   "n_val": 1282
+  },
+  {
+   "seed": 6,
+   "frac": 0.01,
+   "n_real": 690,
+   "n_fill": 75665,
+   "n_syn_audited": 119427,
+   "audit_tiers": [
+    1.0,
+    0.9996099590456998,
+    0.9944744198140805,
+    0.9996180848989143,
+    0.9766625495677046
+   ],
+   "audit_pass": 0.9704462718585452,
+   "audit_pass_real": 0.9391304347826087,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9565217391304348,
+    1.0,
+    0.9826086956521739
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.03280910104513168
+   },
+   "gen_seconds": 282.0118443965912,
+   "discr_gen_vs_test": 0.491375,
+   "discr_aug_vs_test": 0.4973750000000001,
+   "discr_realtrain_vs_test": 0.4688405797101449,
+   "v": {
+    "real": {
+     "flow_MAE": 0.1262800169290104,
+     "flow_MAE_hw": 0.13645181300049392,
+     "val_MAE": 0.04030734890380936,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.11281405749443743,
+     "flow_MAE_hw": 0.13629991859808796,
+     "val_MAE": 0.03187369937832158,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "physonly": {
+     "flow_MAE": 0.05433289579751761,
+     "flow_MAE_hw": 0.07804766318784706,
+     "val_MAE": 0.015236053196332193,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.056813429427797275,
+     "flow_MAE_hw": 0.08238388431066312,
+     "val_MAE": 0.015846462687411755,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.11791025069403632,
+     "flow_MAE_hw": 0.12909193156385784,
+     "val_MAE": 0.03739021801141929,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.07908395374112981,
+     "flow_MAE_hw": 0.1073781346307071,
+     "val_MAE": 0.023256376102985834,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.10579423033101043,
+     "flow_MAE_hw": 0.1273070670530869,
+     "val_MAE": 0.03137184179116,
+     "litres_MAE": null,
+     "n_syn": 75665
+    }
+   },
+   "discr_dq_gen_vs_test": 0.489625,
+   "discr_boot_ref": 0.491625,
+   "discr_dq_realtrain_vs_test": 0.4652173913043478,
+   "discr_channels_gen": {
+    "CURRENT": 0.3538738077845295,
+    "VOLTAGE": 0.3226243850051377,
+    "TEMP": 0.48162556199604845,
+    "SOC": 0.34249976067320176
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.04999999999999993,
+    "VOLTAGE": 0.2028985507246377,
+    "TEMP": 0.3231884057971014,
+    "SOC": 0.3101449275362319
+   },
+   "repeat_frac_real": [
+    0.025393824826717076,
+    0.02747321991178324,
+    0.7712665406427222,
+    0.0011342155009451795
+   ],
+   "repeat_frac_gen": [
+    0.00013542928352448157,
+    0.0010594064920866704,
+    0.026964261595495302,
+    0.00209223680756773
+   ],
+   "discr_id_gen": 0.48887499999999995,
+   "discr_id_real": 0.4572463768115942,
+   "discr_id_boot": 0.4893750000000001,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4966250000000001,
+   "discr_id_dyn_real": 0.10942028985507246,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "physonly",
+   "auto_test_MAE": 0.05433289579751761,
+   "n_val": 150
+  },
+  {
+   "seed": 6,
+   "frac": 0.02,
+   "n_real": 1150,
+   "n_fill": 75205,
+   "n_syn_audited": 122047,
+   "audit_tiers": [
+    1.0,
+    0.9993705447648944,
+    0.9998201556471127,
+    0.9997138839840429,
+    0.9987656137597279
+   ],
+   "audit_pass": 0.9977028971290302,
+   "audit_pass_real": 0.9947826086956522,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9947826086956522,
+    1.0,
+    1.0
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.03443251550197601
+   },
+   "gen_seconds": 281.9322247505188,
+   "discr_gen_vs_test": 0.4804999999999999,
+   "discr_aug_vs_test": 0.498625,
+   "discr_realtrain_vs_test": 0.4352173913043478,
+   "v": {
+    "real": {
+     "flow_MAE": 0.08326528125165263,
+     "flow_MAE_hw": 0.09160718094775128,
+     "val_MAE": 0.039309900483649435,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.08068905716429907,
+     "flow_MAE_hw": 0.08363520581940243,
+     "val_MAE": 0.01854374940276047,
+     "litres_MAE": null,
+     "n_syn": 75205
+    },
+    "physonly": {
+     "flow_MAE": 0.039770992114824884,
+     "flow_MAE_hw": 0.056282986644738076,
+     "val_MAE": 0.013185094809036159,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.04144685701450261,
+     "flow_MAE_hw": 0.05800144750616153,
+     "val_MAE": 0.013568486424741823,
+     "litres_MAE": null,
+     "n_syn": 75205
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.08767150645430645,
+     "flow_MAE_hw": 0.09232690273191634,
+     "val_MAE": 0.02865048070827649,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.05784772151439914,
+     "flow_MAE_hw": 0.06979029898019905,
+     "val_MAE": 0.01980741851675468,
+     "litres_MAE": null,
+     "n_syn": 75205
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.07536258089011522,
+     "flow_MAE_hw": 0.07991449992647945,
+     "val_MAE": 0.01991953629546239,
+     "litres_MAE": null,
+     "n_syn": 75205
+    }
+   },
+   "discr_dq_gen_vs_test": 0.477375,
+   "discr_boot_ref": 0.48512500000000003,
+   "discr_dq_realtrain_vs_test": 0.43739130434782614,
+   "discr_channels_gen": {
+    "CURRENT": 0.34125043259315013,
+    "VOLTAGE": 0.24275046076854812,
+    "TEMP": 0.4470000139704968,
+    "SOC": 0.29824858726867687
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.07303442821431938,
+    "VOLTAGE": 0.15348134481205244,
+    "TEMP": 0.24739045232916101,
+    "SOC": 0.26217855104432963
+   },
+   "repeat_frac_real": [
+    0.1282797731568998,
+    0.03553875236294896,
+    0.8261625708884688,
+    0.09459357277882798
+   ],
+   "repeat_frac_gen": [
+    0.00030672431611342886,
+    0.0005382815814719989,
+    0.022538715484163085,
+    0.000877780156682333
+   ],
+   "discr_id_gen": 0.4806250000000001,
+   "discr_id_real": 0.452608695652174,
+   "discr_id_boot": 0.48575,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4957499999999999,
+   "discr_id_dyn_real": 0.12739130434782608,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "physonly",
+   "auto_test_MAE": 0.039770992114824884,
+   "n_val": 250
+  },
+  {
+   "seed": 6,
+   "frac": 0.05,
+   "n_real": 3148,
+   "n_fill": 73207,
+   "n_syn_audited": 115999,
+   "audit_tiers": [
+    1.0,
+    0.9986821230410221,
+    0.9924452913179609,
+    0.9998237234640858,
+    0.9809873164835349
+   ],
+   "audit_pass": 0.9737096137865039,
+   "audit_pass_real": 0.9475857687420585,
+   "audit_tiers_real": [
+    1.0,
+    0.9980940279542567,
+    0.9749047013977128,
+    1.0,
+    0.9720457433290979
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.040532633662223816
+   },
+   "gen_seconds": 283.3975374698639,
+   "discr_gen_vs_test": 0.4493750000000001,
+   "discr_aug_vs_test": 0.49687499999999996,
+   "discr_realtrain_vs_test": 0.4472690595963036,
+   "v": {
+    "real": {
+     "flow_MAE": 0.0516520829064052,
+     "flow_MAE_hw": 0.06722090563479911,
+     "val_MAE": 0.02440771239551136,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.0359991740676927,
+     "flow_MAE_hw": 0.04476546995220556,
+     "val_MAE": 0.01582478935402199,
+     "litres_MAE": null,
+     "n_syn": 73207
+    },
+    "physonly": {
+     "flow_MAE": 0.029187588904419907,
+     "flow_MAE_hw": 0.03327303026370841,
+     "val_MAE": 0.013789487290497017,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.025564631739431957,
+     "flow_MAE_hw": 0.03078800908125008,
+     "val_MAE": 0.012172243412679367,
+     "litres_MAE": null,
+     "n_syn": 73207
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.03870580772201079,
+     "flow_MAE_hw": 0.048623779006211294,
+     "val_MAE": 0.020443207112666558,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.029922403041454243,
+     "flow_MAE_hw": 0.03798890316567306,
+     "val_MAE": 0.01217365189491426,
+     "litres_MAE": null,
+     "n_syn": 73207
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.037851328098990535,
+     "flow_MAE_hw": 0.0457821109546717,
+     "val_MAE": 0.017644695779268124,
+     "litres_MAE": null,
+     "n_syn": 73207
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4432499999999999,
+   "discr_boot_ref": 0.47450000000000014,
+   "discr_dq_realtrain_vs_test": 0.4456793625578376,
+   "discr_channels_gen": {
+    "CURRENT": 0.300749774995305,
+    "VOLTAGE": 0.131375457287644,
+    "TEMP": 0.36924866762247366,
+    "SOC": 0.21674939732308418
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.0582912588847595,
+    "VOLTAGE": 0.12325357165403095,
+    "TEMP": 0.16105774944202256,
+    "SOC": 0.2515884741216974
+   },
+   "repeat_frac_real": [
+    0.17273907518921608,
+    0.06556267609524336,
+    0.8169300038671896,
+    0.14641456273134082
+   ],
+   "repeat_frac_gen": [
+    0.00035307650703135746,
+    0.0008249696305477896,
+    0.016485524425435452,
+    0.0024325547034326008
+   ],
+   "discr_id_gen": 0.4328749999999999,
+   "discr_id_real": 0.4372597299444003,
+   "discr_id_boot": 0.45962499999999995,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4952500000000001,
+   "discr_id_dyn_real": 0.08974192165613937,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.025564631739431957,
+   "n_val": 682
+  },
+  {
+   "seed": 6,
+   "frac": 0.1,
+   "n_real": 5975,
+   "n_fill": 70380,
+   "n_syn_audited": 110298,
+   "audit_tiers": [
+    1.0,
+    0.9985515845316209,
+    0.9916236213876867,
+    0.9992845176601982,
+    0.9716424682395645
+   ],
+   "audit_pass": 0.9623935501884685,
+   "audit_pass_real": 0.9476150627615063,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9774058577405857,
+    1.0,
+    0.9663598326359832
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.04044203460216522
+   },
+   "gen_seconds": 283.747239112854,
+   "discr_gen_vs_test": 0.4337500000000001,
+   "discr_aug_vs_test": 0.4970000000000001,
+   "discr_realtrain_vs_test": 0.407875,
+   "v": {
+    "real": {
+     "flow_MAE": 0.0542424172224456,
+     "flow_MAE_hw": 0.08224459024798089,
+     "val_MAE": 0.02130352663326783,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.03521535606099169,
+     "flow_MAE_hw": 0.05386715985334283,
+     "val_MAE": 0.01220295004837181,
+     "litres_MAE": null,
+     "n_syn": 70380
+    },
+    "physonly": {
+     "flow_MAE": 0.02131969862851964,
+     "flow_MAE_hw": 0.026408688808806688,
+     "val_MAE": 0.01083521254076303,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.019846961754501225,
+     "flow_MAE_hw": 0.02743057892017549,
+     "val_MAE": 0.009519973855638334,
+     "litres_MAE": null,
+     "n_syn": 70380
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.032151020226840014,
+     "flow_MAE_hw": 0.03973800067740786,
+     "val_MAE": 0.014629142275210807,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.024049202675714226,
+     "flow_MAE_hw": 0.03456168727009102,
+     "val_MAE": 0.010686495318049978,
+     "litres_MAE": null,
+     "n_syn": 70380
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.033979652965996185,
+     "flow_MAE_hw": 0.050115017645656186,
+     "val_MAE": 0.012970273077022752,
+     "litres_MAE": null,
+     "n_syn": 70380
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4282499999999999,
+   "discr_boot_ref": 0.45850000000000013,
+   "discr_dq_realtrain_vs_test": 0.40825,
+   "discr_channels_gen": {
+    "CURRENT": 0.2942488059210153,
+    "VOLTAGE": 0.1460015828854101,
+    "TEMP": 0.37037493344089667,
+    "SOC": 0.14800053594200957
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.11287434719572287,
+    "VOLTAGE": 0.14000252031511817,
+    "TEMP": 0.1728747709987114,
+    "SOC": 0.16862675548902217
+   },
+   "repeat_frac_real": [
+    0.08492632344915409,
+    0.05063125341095143,
+    0.8212188466436238,
+    0.05769692559577952
+   ],
+   "repeat_frac_gen": [
+    0.0001939409993637789,
+    0.0007812826437784752,
+    0.01929358173548813,
+    0.01145828652338684
+   ],
+   "discr_id_gen": 0.42274999999999996,
+   "discr_id_real": 0.38049999999999995,
+   "discr_id_boot": 0.44700000000000006,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4963750000000001,
+   "discr_id_dyn_real": 0.05500000000000005,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.019846961754501225,
+   "n_val": 1289
+  },
+  {
+   "seed": 7,
+   "frac": 0.01,
+   "n_real": 591,
+   "n_fill": 75764,
+   "n_syn_audited": 119090,
+   "audit_tiers": [
+    1.0,
+    0.9987177614387042,
+    0.9864796870688676,
+    0.9981902582331077,
+    0.9796627225657756
+   ],
+   "audit_pass": 0.9664670269919332,
+   "audit_pass_real": 0.8798646362098139,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9255499153976311,
+    1.0,
+    0.9424703891708968
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.032124750316143036
+   },
+   "gen_seconds": 284.6507577896118,
+   "discr_gen_vs_test": 0.49224999999999997,
+   "discr_aug_vs_test": 0.498625,
+   "discr_realtrain_vs_test": 0.47970392619609525,
+   "v": {
+    "real": {
+     "flow_MAE": 0.23880834392685749,
+     "flow_MAE_hw": 0.25254700738853236,
+     "val_MAE": 0.027017341808544423,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.1304272912061198,
+     "flow_MAE_hw": 0.16231802739291337,
+     "val_MAE": 0.020157960103726325,
+     "litres_MAE": null,
+     "n_syn": 75764
+    },
+    "physonly": {
+     "flow_MAE": 0.06295081832294604,
+     "flow_MAE_hw": 0.06706767699620594,
+     "val_MAE": 0.01382132063029607,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.06361443052099261,
+     "flow_MAE_hw": 0.06722616844710616,
+     "val_MAE": 0.011188039009507168,
+     "litres_MAE": null,
+     "n_syn": 75764
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.08233583023392808,
+     "flow_MAE_hw": 0.09243572286713218,
+     "val_MAE": 0.017308516701496694,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.09535007191562916,
+     "flow_MAE_hw": 0.10659482286348071,
+     "val_MAE": 0.015682548435393816,
+     "litres_MAE": null,
+     "n_syn": 75764
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.12933657988246078,
+     "flow_MAE_hw": 0.15553051865729958,
+     "val_MAE": 0.020748961468148773,
+     "litres_MAE": null,
+     "n_syn": 75764
+    }
+   },
+   "discr_dq_gen_vs_test": 0.49275,
+   "discr_boot_ref": 0.49512500000000004,
+   "discr_dq_realtrain_vs_test": 0.48309018093399136,
+   "discr_channels_gen": {
+    "CURRENT": 0.3888751059155865,
+    "VOLTAGE": 0.35362547986077875,
+    "TEMP": 0.4755002023846794,
+    "SOC": 0.3383755575189259
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.06852791878172593,
+    "VOLTAGE": 0.20812182741116747,
+    "TEMP": 0.39509306260575305,
+    "SOC": 0.3291032148900169
+   },
+   "repeat_frac_real": [
+    0.06503347311116016,
+    0.03369381299198117,
+    0.8600750386228205,
+    0.029574045464577356
+   ],
+   "repeat_frac_gen": [
+    7.958905759984228e-05,
+    0.0011328662648271129,
+    0.044673922170663766,
+    0.0007812870791911123
+   ],
+   "discr_id_gen": 0.4881249999999999,
+   "discr_id_real": 0.47208395909318457,
+   "discr_id_boot": 0.491,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4967499999999999,
+   "discr_id_dyn_real": 0.11932703997711513,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.06361443052099261,
+   "n_val": 125
+  },
+  {
+   "seed": 7,
+   "frac": 0.02,
+   "n_real": 1151,
+   "n_fill": 75204,
+   "n_syn_audited": 118177,
+   "audit_tiers": [
+    1.0,
+    0.9977846083416445,
+    0.9938688422739238,
+    0.999444108366169,
+    0.9735951473930318
+   ],
+   "audit_pass": 0.9660824354593464,
+   "audit_pass_real": 0.9774109470026064,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9800173761946134,
+    1.0,
+    0.9973935708079931
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.035403914749622345
+   },
+   "gen_seconds": 284.95702743530273,
+   "discr_gen_vs_test": 0.4800000000000001,
+   "discr_aug_vs_test": 0.4978750000000002,
+   "discr_realtrain_vs_test": 0.46481467509195507,
+   "v": {
+    "real": {
+     "flow_MAE": 0.11607898835227329,
+     "flow_MAE_hw": 0.11077665120241549,
+     "val_MAE": 0.01924341087676067,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.09385852447553243,
+     "flow_MAE_hw": 0.08006608466890279,
+     "val_MAE": 0.01382341891152257,
+     "litres_MAE": null,
+     "n_syn": 75204
+    },
+    "physonly": {
+     "flow_MAE": 0.03392467788441157,
+     "flow_MAE_hw": 0.047050301276524216,
+     "val_MAE": 0.012191474198120432,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.03577806568537667,
+     "flow_MAE_hw": 0.04899152518834128,
+     "val_MAE": 0.010909498660458136,
+     "litres_MAE": null,
+     "n_syn": 75204
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.06612425322430004,
+     "flow_MAE_hw": 0.06771905742570006,
+     "val_MAE": 0.015950655046183766,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.05851767237609199,
+     "flow_MAE_hw": 0.0646069883147649,
+     "val_MAE": 0.013864610655538909,
+     "litres_MAE": null,
+     "n_syn": 75204
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.08566977101686238,
+     "flow_MAE_hw": 0.07471694640580327,
+     "val_MAE": 0.012723346201948513,
+     "litres_MAE": null,
+     "n_syn": 75204
+    }
+   },
+   "discr_dq_gen_vs_test": 0.47787500000000005,
+   "discr_boot_ref": 0.48550000000000004,
+   "discr_dq_realtrain_vs_test": 0.4674205413562198,
+   "discr_channels_gen": {
+    "CURRENT": 0.3006270408997075,
+    "VOLTAGE": 0.23637653882912046,
+    "TEMP": 0.4503749203142555,
+    "SOC": 0.31699990051881166
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.07515697432275825,
+    "VOLTAGE": 0.16595196382007815,
+    "TEMP": 0.20678339580617122,
+    "SOC": 0.30929883293495575
+   },
+   "repeat_frac_real": [
+    0.0409851546859064,
+    0.029652853851093567,
+    0.8526800891474332,
+    0.0019264911419181808
+   ],
+   "repeat_frac_gen": [
+    4.929966877244929e-05,
+    8.903373017113975e-05,
+    0.021272807075311866,
+    0.0007233070806465321
+   ],
+   "discr_id_gen": 0.47625000000000006,
+   "discr_id_real": 0.4582967084787324,
+   "discr_id_boot": 0.48387500000000006,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4973750000000001,
+   "discr_id_dyn_real": 0.10817598792794492,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.03577806568537667,
+   "n_val": 250
+  },
+  {
+   "seed": 7,
+   "frac": 0.05,
+   "n_real": 3097,
+   "n_fill": 73258,
+   "n_syn_audited": 116476,
+   "audit_tiers": [
+    1.0,
+    0.9970221118679328,
+    0.9891453880481831,
+    0.9995470254672348,
+    0.9907224104955877
+   ],
+   "audit_pass": 0.9770492903398986,
+   "audit_pass_real": 0.9660962221504682,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.973845657087504,
+    1.0,
+    0.9922505650629642
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.04219570383429527
+   },
+   "gen_seconds": 284.50176644325256,
+   "discr_gen_vs_test": 0.46287500000000004,
+   "discr_aug_vs_test": 0.49649999999999994,
+   "discr_realtrain_vs_test": 0.45592372816161875,
+   "v": {
+    "real": {
+     "flow_MAE": 0.060786989822230166,
+     "flow_MAE_hw": 0.07660425906313152,
+     "val_MAE": 0.019719132413244845,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.04557590955728606,
+     "flow_MAE_hw": 0.06248551161224277,
+     "val_MAE": 0.011830205845208532,
+     "litres_MAE": null,
+     "n_syn": 73258
+    },
+    "physonly": {
+     "flow_MAE": 0.029364238853150853,
+     "flow_MAE_hw": 0.04377541097370312,
+     "val_MAE": 0.009577875559328647,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.029300142135758878,
+     "flow_MAE_hw": 0.041095431486580104,
+     "val_MAE": 0.008231345642950189,
+     "litres_MAE": null,
+     "n_syn": 73258
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.04373890668894228,
+     "flow_MAE_hw": 0.056068905389625376,
+     "val_MAE": 0.015469056180656391,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.038567563564229024,
+     "flow_MAE_hw": 0.052184447605023526,
+     "val_MAE": 0.009939664851547023,
+     "litres_MAE": null,
+     "n_syn": 73258
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.04390117473586946,
+     "flow_MAE_hw": 0.06290091164208621,
+     "val_MAE": 0.013021033462305334,
+     "litres_MAE": null,
+     "n_syn": 73258
+    }
+   },
+   "discr_dq_gen_vs_test": 0.459125,
+   "discr_boot_ref": 0.4733750000000001,
+   "discr_dq_realtrain_vs_test": 0.45414784188092694,
+   "discr_channels_gen": {
+    "CURRENT": 0.28825044656364673,
+    "VOLTAGE": 0.16287606772334262,
+    "TEMP": 0.4019997781597632,
+    "SOC": 0.22537449135437215
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.08395039135086435,
+    "VOLTAGE": 0.16193057041500092,
+    "TEMP": 0.21827508430780018,
+    "SOC": 0.22828432844692204
+   },
+   "repeat_frac_real": [
+    0.10465948814420688,
+    0.05889289775519086,
+    0.8212435596860918,
+    0.08261852283415928
+   ],
+   "repeat_frac_gen": [
+    0.0007469349908994127,
+    0.0004341256343908131,
+    0.02928910900846153,
+    0.0011149899139512973
+   ],
+   "discr_id_gen": 0.458375,
+   "discr_id_real": 0.4520500273163124,
+   "discr_id_boot": 0.467375,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49487500000000006,
+   "discr_id_dyn_real": 0.06361375907664346,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.029300142135758878,
+   "n_val": 668
+  },
+  {
+   "seed": 7,
+   "frac": 0.1,
+   "n_real": 6057,
+   "n_fill": 70298,
+   "n_syn_audited": 105902,
+   "audit_tiers": [
+    1.0,
+    0.9966455851008071,
+    0.976396799329117,
+    0.999729200880534,
+    0.9487141409553094
+   ],
+   "audit_pass": 0.9251022048289598,
+   "audit_pass_real": 0.9166253921083044,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9450222882615156,
+    1.0,
+    0.9683011391778108
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.04772856831550598
+   },
+   "gen_seconds": 283.3874294757843,
+   "discr_gen_vs_test": 0.4229999999999998,
+   "discr_aug_vs_test": 0.49649999999999994,
+   "discr_realtrain_vs_test": 0.41637500000000005,
+   "v": {
+    "real": {
+     "flow_MAE": 0.0459866189981531,
+     "flow_MAE_hw": 0.06447480341230893,
+     "val_MAE": 0.019731126965629064,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.024172040872091148,
+     "flow_MAE_hw": 0.03331232794592545,
+     "val_MAE": 0.012750776413158037,
+     "litres_MAE": null,
+     "n_syn": 70298
+    },
+    "physonly": {
+     "flow_MAE": 0.020402966554978638,
+     "flow_MAE_hw": 0.027340193869007542,
+     "val_MAE": 0.013800260985256286,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.018471901169913322,
+     "flow_MAE_hw": 0.02495210427798666,
+     "val_MAE": 0.010820994004238398,
+     "litres_MAE": null,
+     "n_syn": 70298
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.033921479430309334,
+     "flow_MAE_hw": 0.049161907245395285,
+     "val_MAE": 0.016962528809633986,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.019673591570376143,
+     "flow_MAE_hw": 0.027764976224566938,
+     "val_MAE": 0.011491760733037714,
+     "litres_MAE": null,
+     "n_syn": 70298
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.025985188219428267,
+     "flow_MAE_hw": 0.036170648679988274,
+     "val_MAE": 0.01459171663757094,
+     "litres_MAE": null,
+     "n_syn": 70298
+    }
+   },
+   "discr_dq_gen_vs_test": 0.412625,
+   "discr_boot_ref": 0.4557499999999999,
+   "discr_dq_realtrain_vs_test": 0.41337500000000005,
+   "discr_channels_gen": {
+    "CURRENT": 0.27849964928427473,
+    "VOLTAGE": 0.08224965877764912,
+    "TEMP": 0.3747491991108013,
+    "SOC": 0.12849969147704998
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.07437517422100182,
+    "VOLTAGE": 0.09924772156668715,
+    "TEMP": 0.2177512413348932,
+    "SOC": 0.15674977049474215
+   },
+   "repeat_frac_real": [
+    0.12798702184321412,
+    0.05399430052185398,
+    0.8051912627143585,
+    0.09816884524552978
+   ],
+   "repeat_frac_gen": [
+    0.00029272346131328965,
+    0.0019825548312508777,
+    0.025300257087561676,
+    0.0066492975868584
+   ],
+   "discr_id_gen": 0.40625,
+   "discr_id_real": 0.3838750000000001,
+   "discr_id_boot": 0.44800000000000006,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49412500000000004,
+   "discr_id_dyn_real": 0.0807500000000001,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.018471901169913322,
+   "n_val": 1306
+  },
+  {
+   "seed": 8,
+   "frac": 0.01,
+   "n_real": 690,
+   "n_fill": 75665,
+   "n_syn_audited": 118846,
+   "audit_tiers": [
+    1.0,
+    0.9991549112656829,
+    0.9724614834557629,
+    0.9999187414678541,
+    0.9928573750243775
+   ],
+   "audit_pass": 0.9657251511408698,
+   "audit_pass_real": 0.9115942028985508,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9289855072463769,
+    1.0,
+    0.9826086956521739
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.024934453889727592
+   },
+   "gen_seconds": 283.6911528110504,
+   "discr_gen_vs_test": 0.4880000000000001,
+   "discr_aug_vs_test": 0.4992500000000002,
+   "discr_realtrain_vs_test": 0.477536231884058,
+   "v": {
+    "real": {
+     "flow_MAE": 0.11306432143228914,
+     "flow_MAE_hw": 0.11837726589051703,
+     "val_MAE": 0.028787616990950202,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.09353492496967791,
+     "flow_MAE_hw": 0.11059996825692948,
+     "val_MAE": 0.017935428279904894,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "physonly": {
+     "flow_MAE": 0.046414204320204815,
+     "flow_MAE_hw": 0.06039533473812322,
+     "val_MAE": 0.021580696840085418,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.048384484623147365,
+     "flow_MAE_hw": 0.0659525295799999,
+     "val_MAE": 0.01416992687828961,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.08257629808398212,
+     "flow_MAE_hw": 0.0889630388007974,
+     "val_MAE": 0.022937936209424123,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.08241731623325076,
+     "flow_MAE_hw": 0.09720141351538626,
+     "val_MAE": 0.019893180968305516,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.08501961097880348,
+     "flow_MAE_hw": 0.10333043150758897,
+     "val_MAE": 0.023601084764195413,
+     "litres_MAE": null,
+     "n_syn": 75665
+    }
+   },
+   "discr_dq_gen_vs_test": 0.48687500000000006,
+   "discr_boot_ref": 0.493,
+   "discr_dq_realtrain_vs_test": 0.4797101449275363,
+   "discr_channels_gen": {
+    "CURRENT": 0.34800057344669877,
+    "VOLTAGE": 0.3353729320969162,
+    "TEMP": 0.49012534348435255,
+    "SOC": 0.3504998390580023
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.13695652173913053,
+    "VOLTAGE": 0.16086956521739137,
+    "TEMP": 0.40289855072463776,
+    "SOC": 0.2942028985507247
+   },
+   "repeat_frac_real": [
+    0.046880907372400756,
+    0.018777567737870194,
+    0.8200378071833648,
+    0.03100189035916824
+   ],
+   "repeat_frac_gen": [
+    0.0009482494335014476,
+    0.0021646573680663833,
+    0.039678678070049,
+    0.0011553131601070878
+   ],
+   "discr_id_gen": 0.492625,
+   "discr_id_real": 0.4826086956521738,
+   "discr_id_boot": 0.49450000000000005,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4952500000000001,
+   "discr_id_dyn_real": 0.1376811594202899,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.048384484623147365,
+   "n_val": 150
+  },
+  {
+   "seed": 8,
+   "frac": 0.02,
+   "n_real": 1197,
+   "n_fill": 75158,
+   "n_syn_audited": 119280,
+   "audit_tiers": [
+    1.0,
+    0.9992310964237804,
+    0.9824788142525276,
+    0.9998364034944214,
+    0.9940287275463796
+   ],
+   "audit_pass": 0.975689559271014,
+   "audit_pass_real": 0.9281537176274018,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9281537176274018,
+    1.0,
+    1.0
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.03190313279628754
+   },
+   "gen_seconds": 283.88759422302246,
+   "discr_gen_vs_test": 0.491625,
+   "discr_aug_vs_test": 0.499625,
+   "discr_realtrain_vs_test": 0.48329329757776396,
+   "v": {
+    "real": {
+     "flow_MAE": 0.09572966058627887,
+     "flow_MAE_hw": 0.12147050100801594,
+     "val_MAE": 0.026988439874440294,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.0760503429447364,
+     "flow_MAE_hw": 0.11341035312906461,
+     "val_MAE": 0.015352856545544863,
+     "litres_MAE": null,
+     "n_syn": 75158
+    },
+    "physonly": {
+     "flow_MAE": 0.06483589294672698,
+     "flow_MAE_hw": 0.103493807890045,
+     "val_MAE": 0.010632114818715116,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.06147134112154279,
+     "flow_MAE_hw": 0.10209526077830537,
+     "val_MAE": 0.011359515047625316,
+     "litres_MAE": null,
+     "n_syn": 75158
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.06681575125792319,
+     "flow_MAE_hw": 0.08743667587665732,
+     "val_MAE": 0.018797146667496004,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.061914066972761576,
+     "flow_MAE_hw": 0.09402730720549031,
+     "val_MAE": 0.011718177889347049,
+     "litres_MAE": null,
+     "n_syn": 75158
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.07655993785515164,
+     "flow_MAE_hw": 0.11191276618675591,
+     "val_MAE": 0.012081269896586165,
+     "litres_MAE": null,
+     "n_syn": 75158
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4891249999999999,
+   "discr_boot_ref": 0.49275,
+   "discr_dq_realtrain_vs_test": 0.4816240249473711,
+   "discr_channels_gen": {
+    "CURRENT": 0.3401245887024812,
+    "VOLTAGE": 0.2469988513251299,
+    "TEMP": 0.4821247962909362,
+    "SOC": 0.2642506333369994
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.09816207184628234,
+    "VOLTAGE": 0.1599832915622389,
+    "TEMP": 0.38763575605680867,
+    "SOC": 0.2736006683375104
+   },
+   "repeat_frac_real": [
+    0.060186698630634555,
+    0.020413352221132542,
+    0.8199120990883004,
+    0.040971995205404815
+   ],
+   "repeat_frac_gen": [
+    0.0006251275770565422,
+    0.0003276907823754119,
+    0.023419867028256495,
+    0.0010545154987898404
+   ],
+   "discr_id_gen": 0.484375,
+   "discr_id_real": 0.468671657305579,
+   "discr_id_boot": 0.48349999999999993,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": false,
+   "discr_id_dyn_gen": 0.4959999999999999,
+   "discr_id_dyn_real": 0.17711323276351543,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "physonly",
+   "auto_test_MAE": 0.06483589294672698,
+   "n_val": 258
+  },
+  {
+   "seed": 8,
+   "frac": 0.05,
+   "n_real": 3092,
+   "n_fill": 73263,
+   "n_syn_audited": 114910,
+   "audit_tiers": [
+    1.0,
+    0.997299110887435,
+    0.998624391880557,
+    0.9996896493876867,
+    0.967916456970307
+   ],
+   "audit_pass": 0.9638483475926858,
+   "audit_pass_real": 0.9776843467011643,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.990620957309185,
+    1.0,
+    0.9870633893919794
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.029823314398527145
+   },
+   "gen_seconds": 283.68043756484985,
+   "discr_gen_vs_test": 0.46125000000000005,
+   "discr_aug_vs_test": 0.4967499999999999,
+   "discr_realtrain_vs_test": 0.44712322065337096,
+   "v": {
+    "real": {
+     "flow_MAE": 0.05825666486795079,
+     "flow_MAE_hw": 0.07051802002080908,
+     "val_MAE": 0.023277296886799213,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.044090556261361484,
+     "flow_MAE_hw": 0.054765025162973796,
+     "val_MAE": 0.01546622023594558,
+     "litres_MAE": null,
+     "n_syn": 73263
+    },
+    "physonly": {
+     "flow_MAE": 0.02966888556443407,
+     "flow_MAE_hw": 0.03777751085216707,
+     "val_MAE": 0.01518148942101693,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.028177627371547533,
+     "flow_MAE_hw": 0.03650122694467312,
+     "val_MAE": 0.01177188052763595,
+     "litres_MAE": null,
+     "n_syn": 73263
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.044327012921752035,
+     "flow_MAE_hw": 0.06050890703291002,
+     "val_MAE": 0.019234495982948078,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.03716352092149079,
+     "flow_MAE_hw": 0.051457506509524076,
+     "val_MAE": 0.01286353862049589,
+     "litres_MAE": null,
+     "n_syn": 73263
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.04261931702808078,
+     "flow_MAE_hw": 0.05112628521741297,
+     "val_MAE": 0.016634869102512155,
+     "litres_MAE": null,
+     "n_syn": 73263
+    }
+   },
+   "discr_dq_gen_vs_test": 0.45300000000000007,
+   "discr_boot_ref": 0.4726250000000001,
+   "discr_dq_realtrain_vs_test": 0.4464753174111078,
+   "discr_channels_gen": {
+    "CURRENT": 0.30674954077852046,
+    "VOLTAGE": 0.18800083410428903,
+    "TEMP": 0.4019993562320089,
+    "SOC": 0.21162653805558618
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.10397709811938582,
+    "VOLTAGE": 0.1845088367669997,
+    "TEMP": 0.2184663432932168,
+    "SOC": 0.26455607997461206
+   },
+   "repeat_frac_real": [
+    0.13155970527026267,
+    0.0787586478429608,
+    0.8130659767141009,
+    0.10735980651330221
+   ],
+   "repeat_frac_gen": [
+    0.00024177711857673113,
+    0.0017578974849882516,
+    0.026046471151335827,
+    0.0012743432478347894
+   ],
+   "discr_id_gen": 0.45137499999999997,
+   "discr_id_real": 0.43531563208828117,
+   "discr_id_boot": 0.45925000000000016,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4961249999999999,
+   "discr_id_dyn_real": 0.09621735956864008,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.028177627371547533,
+   "n_val": 667
+  },
+  {
+   "seed": 8,
+   "frac": 0.1,
+   "n_real": 5817,
+   "n_fill": 70538,
+   "n_syn_audited": 111576,
+   "audit_tiers": [
+    1.0,
+    0.9969876371234546,
+    0.9907191363398921,
+    0.9998171687271461,
+    0.982239247779906
+   ],
+   "audit_pass": 0.9714086714260839,
+   "audit_pass_real": 0.9640708268867114,
+   "audit_tiers_real": [
+    1.0,
+    0.998968540484786,
+    0.9805741791301358,
+    1.0,
+    0.9834966477565755
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.03914332389831543
+   },
+   "gen_seconds": 283.85197734832764,
+   "discr_gen_vs_test": 0.44562500000000005,
+   "discr_aug_vs_test": 0.49749999999999994,
+   "discr_realtrain_vs_test": 0.3932499999999999,
+   "v": {
+    "real": {
+     "flow_MAE": 0.031508827510655445,
+     "flow_MAE_hw": 0.03973061600041613,
+     "val_MAE": 0.020985963216534908,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.023063990932298557,
+     "flow_MAE_hw": 0.029251188389887748,
+     "val_MAE": 0.017068480976366797,
+     "litres_MAE": null,
+     "n_syn": 70538
+    },
+    "physonly": {
+     "flow_MAE": 0.02175969245642651,
+     "flow_MAE_hw": 0.027429540885986092,
+     "val_MAE": 0.016790496429838146,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.019526585172556395,
+     "flow_MAE_hw": 0.02501383213048863,
+     "val_MAE": 0.01475855037434742,
+     "litres_MAE": null,
+     "n_syn": 70538
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.02810351791054047,
+     "flow_MAE_hw": 0.0373719776227333,
+     "val_MAE": 0.020027170071387726,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.020649254739448578,
+     "flow_MAE_hw": 0.028008367777110965,
+     "val_MAE": 0.014650255082630828,
+     "litres_MAE": null,
+     "n_syn": 70538
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.024321472404882284,
+     "flow_MAE_hw": 0.030812778185564684,
+     "val_MAE": 0.01812276209143147,
+     "litres_MAE": null,
+     "n_syn": 70538
+    }
+   },
+   "discr_dq_gen_vs_test": 0.44037499999999985,
+   "discr_boot_ref": 0.45587500000000003,
+   "discr_dq_realtrain_vs_test": 0.389375,
+   "discr_channels_gen": {
+    "CURRENT": 0.2927501185382585,
+    "VOLTAGE": 0.11800015995749968,
+    "TEMP": 0.411249747194954,
+    "SOC": 0.1466254733912199
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.06312437689474859,
+    "VOLTAGE": 0.08299937751592001,
+    "TEMP": 0.1602498018580386,
+    "SOC": 0.1833753807780779
+   },
+   "repeat_frac_real": [
+    0.10274233692849295,
+    0.04990619697887003,
+    0.8035368597289803,
+    0.07291970311904389
+   ],
+   "repeat_frac_gen": [
+    0.00011690218560326203,
+    0.0005330739663508749,
+    0.05650973717271285,
+    0.0033854872950704685
+   ],
+   "discr_id_gen": 0.43537499999999996,
+   "discr_id_real": 0.37812500000000004,
+   "discr_id_boot": 0.4417500000000001,
+   "success_fidelity_id": false,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4967499999999999,
+   "discr_id_dyn_real": 0.04149999999999998,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": false,
+   "auto_choice": "hyb_feat_w0.3",
+   "auto_test_MAE": 0.020649254739448578,
+   "n_val": 1249
+  },
+  {
+   "seed": 9,
+   "frac": 0.01,
+   "n_real": 690,
+   "n_fill": 75665,
+   "n_syn_audited": 121778,
+   "audit_tiers": [
+    1.0,
+    0.9997237209907041,
+    0.9949538451537412,
+    0.9999512448807125,
+    0.9942387700708575
+   ],
+   "audit_pass": 0.9895501527660404,
+   "audit_pass_real": 0.9884057971014493,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9884057971014493,
+    1.0,
+    0.9942028985507246
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.025869149714708328
+   },
+   "gen_seconds": 283.0471444129944,
+   "discr_gen_vs_test": 0.49387500000000006,
+   "discr_aug_vs_test": 0.49849999999999994,
+   "discr_realtrain_vs_test": 0.48043478260869565,
+   "v": {
+    "real": {
+     "flow_MAE": 0.21399656387563493,
+     "flow_MAE_hw": 0.2025482340921847,
+     "val_MAE": 0.015863551531890854,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.18400934432276256,
+     "flow_MAE_hw": 0.16977967143315276,
+     "val_MAE": 0.017135654988355224,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "physonly": {
+     "flow_MAE": 0.17753242422060672,
+     "flow_MAE_hw": 0.16259123308038403,
+     "val_MAE": 0.017729814862357245,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.17138380485712376,
+     "flow_MAE_hw": 0.15987878624039406,
+     "val_MAE": 0.01654717708274374,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.2134018827166631,
+     "flow_MAE_hw": 0.20100816227003232,
+     "val_MAE": 0.015545926644145181,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.1694341595527274,
+     "flow_MAE_hw": 0.14971471791125116,
+     "val_MAE": 0.017759585602353224,
+     "litres_MAE": null,
+     "n_syn": 75665
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.1879555903196659,
+     "flow_MAE_hw": 0.16866745916008685,
+     "val_MAE": 0.022915785351086036,
+     "litres_MAE": null,
+     "n_syn": 75665
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4946250000000001,
+   "discr_boot_ref": 0.4977499999999999,
+   "discr_dq_realtrain_vs_test": 0.48115942028985503,
+   "discr_channels_gen": {
+    "CURRENT": 0.38600004331791604,
+    "VOLTAGE": 0.3539996360169907,
+    "TEMP": 0.46487493639439104,
+    "SOC": 0.3849992775659231
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.14855072463768115,
+    "VOLTAGE": 0.26884057971014486,
+    "TEMP": 0.3710144927536231,
+    "SOC": 0.3615942028985507
+   },
+   "repeat_frac_real": [
+    0.04877126654064272,
+    0.0479521109010712,
+    0.8289224952741021,
+    0.0003780718336483932
+   ],
+   "repeat_frac_gen": [
+    4.641375218055378e-05,
+    0.0001756582005602497,
+    0.0227081067687674,
+    0.0008993557057139613
+   ],
+   "discr_id_gen": 0.48875000000000013,
+   "discr_id_real": 0.47608695652173905,
+   "discr_id_boot": 0.492625,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49749999999999994,
+   "discr_id_dyn_real": 0.12608695652173907,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_feat_real",
+   "auto_test_MAE": 0.2134018827166631,
+   "n_val": 150
+  },
+  {
+   "seed": 9,
+   "frac": 0.02,
+   "n_real": 1265,
+   "n_fill": 75090,
+   "n_syn_audited": 116551,
+   "audit_tiers": [
+    1.0,
+    0.998059667277967,
+    0.9695687057898873,
+    0.9997134529735394,
+    0.9839615535761069
+   ],
+   "audit_pass": 0.9542097851716007,
+   "audit_pass_real": 0.9098814229249012,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9201581027667984,
+    1.0,
+    0.9881422924901185
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.03620615601539612
+   },
+   "gen_seconds": 282.45631289482117,
+   "discr_gen_vs_test": 0.477125,
+   "discr_aug_vs_test": 0.49912500000000004,
+   "discr_realtrain_vs_test": 0.46837944664031617,
+   "v": {
+    "real": {
+     "flow_MAE": 0.07983257339183358,
+     "flow_MAE_hw": 0.0827329703475044,
+     "val_MAE": 0.02945877644376248,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.06397911002502443,
+     "flow_MAE_hw": 0.06054132234525864,
+     "val_MAE": 0.02004199830148169,
+     "litres_MAE": null,
+     "n_syn": 75090
+    },
+    "physonly": {
+     "flow_MAE": 0.03170674663366087,
+     "flow_MAE_hw": 0.03904735490993719,
+     "val_MAE": 0.016084237008241815,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.03328208469707722,
+     "flow_MAE_hw": 0.03709880079791921,
+     "val_MAE": 0.014553085087233714,
+     "litres_MAE": null,
+     "n_syn": 75090
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.058692521620645574,
+     "flow_MAE_hw": 0.05818007164896795,
+     "val_MAE": 0.033183567623763136,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.04935500795263329,
+     "flow_MAE_hw": 0.051884992962652594,
+     "val_MAE": 0.014961480327189214,
+     "litres_MAE": null,
+     "n_syn": 75090
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.06328177961049532,
+     "flow_MAE_hw": 0.06175247212226359,
+     "val_MAE": 0.01819883674677097,
+     "litres_MAE": null,
+     "n_syn": 75090
+    }
+   },
+   "discr_dq_gen_vs_test": 0.47462499999999996,
+   "discr_boot_ref": 0.48949999999999994,
+   "discr_dq_realtrain_vs_test": 0.46996047430830035,
+   "discr_channels_gen": {
+    "CURRENT": 0.30325044703245563,
+    "VOLTAGE": 0.26512514892877703,
+    "TEMP": 0.4177503881032125,
+    "SOC": 0.2733750554248986
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.05098066223279163,
+    "VOLTAGE": 0.19248658687190678,
+    "TEMP": 0.2711433625864146,
+    "SOC": 0.25098759601888243
+   },
+   "repeat_frac_real": [
+    0.0730022340608352,
+    0.01285444234404537,
+    0.7884859941570717,
+    0.04182849286819041
+   ],
+   "repeat_frac_gen": [
+    0.00043235411406016325,
+    0.0005573227320154304,
+    0.025306331656266914,
+    0.0008210624719986361
+   ],
+   "discr_id_gen": 0.47062499999999985,
+   "discr_id_real": 0.4616600790513834,
+   "discr_id_boot": 0.485,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.4952500000000001,
+   "discr_id_dyn_real": 0.06916996047430835,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.03328208469707722,
+   "n_val": 275
+  },
+  {
+   "seed": 9,
+   "frac": 0.05,
+   "n_real": 3106,
+   "n_fill": 73249,
+   "n_syn_audited": 115351,
+   "audit_tiers": [
+    1.0,
+    0.9972147183677579,
+    0.9882632258930519,
+    0.9990184399067098,
+    0.9821137938556016
+   ],
+   "audit_pass": 0.9677259685565194,
+   "audit_pass_real": 0.9597553122987765,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9732775273663876,
+    1.0,
+    0.9842240824211204
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.04000331461429596
+   },
+   "gen_seconds": 282.47101378440857,
+   "discr_gen_vs_test": 0.4508749999999999,
+   "discr_aug_vs_test": 0.498375,
+   "discr_realtrain_vs_test": 0.44494528457591165,
+   "v": {
+    "real": {
+     "flow_MAE": 0.047552910728902706,
+     "flow_MAE_hw": 0.05957420274564844,
+     "val_MAE": 0.031083123609136714,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.035576747805273944,
+     "flow_MAE_hw": 0.04108680427570485,
+     "val_MAE": 0.018121321811192196,
+     "litres_MAE": null,
+     "n_syn": 73249
+    },
+    "physonly": {
+     "flow_MAE": 0.02418448792696422,
+     "flow_MAE_hw": 0.030719874688874837,
+     "val_MAE": 0.020261502369707397,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.02217799241703141,
+     "flow_MAE_hw": 0.026504379772636262,
+     "val_MAE": 0.015449935604185436,
+     "litres_MAE": null,
+     "n_syn": 73249
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.042439785988685745,
+     "flow_MAE_hw": 0.047362693934053034,
+     "val_MAE": 0.029416235077961095,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.03089220069692244,
+     "flow_MAE_hw": 0.03485258431260383,
+     "val_MAE": 0.01744593049861371,
+     "litres_MAE": null,
+     "n_syn": 73249
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.03657743990041572,
+     "flow_MAE_hw": 0.044363411478490725,
+     "val_MAE": 0.022502767588208874,
+     "litres_MAE": null,
+     "n_syn": 73249
+    }
+   },
+   "discr_dq_gen_vs_test": 0.44362500000000016,
+   "discr_boot_ref": 0.468125,
+   "discr_dq_realtrain_vs_test": 0.4431748548716612,
+   "discr_channels_gen": {
+    "CURRENT": 0.2893747902667455,
+    "VOLTAGE": 0.1448748951392329,
+    "TEMP": 0.3772496836245057,
+    "SOC": 0.15850048938931394
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.08419124307688952,
+    "VOLTAGE": 0.10254391018986997,
+    "TEMP": 0.20138567177594735,
+    "SOC": 0.20653515186716964
+   },
+   "repeat_frac_real": [
+    0.09906492343010723,
+    0.038536913127467175,
+    0.80966712393964,
+    0.07286038242951931
+   ],
+   "repeat_frac_gen": [
+    0.0006358664085006331,
+    0.0005834743333485358,
+    0.01818570389883731,
+    0.0011145565915449745
+   ],
+   "discr_id_gen": 0.4413750000000001,
+   "discr_id_real": 0.43496462638440325,
+   "discr_id_boot": 0.45975,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49512500000000004,
+   "discr_id_dyn_real": 0.08016849267330217,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_resid_w0.3",
+   "auto_test_MAE": 0.02217799241703141,
+   "n_val": 671
+  },
+  {
+   "seed": 9,
+   "frac": 0.1,
+   "n_real": 6049,
+   "n_fill": 70306,
+   "n_syn_audited": 108095,
+   "audit_tiers": [
+    1.0,
+    0.9983055140668536,
+    0.9875359204814437,
+    0.9998951864371249,
+    0.9566945296054643
+   ],
+   "audit_pass": 0.9441518399147516,
+   "audit_pass_real": 0.9499090758803108,
+   "audit_tiers_real": [
+    1.0,
+    1.0,
+    0.9687551661431641,
+    1.0,
+    0.980162010249628
+   ],
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.044270481914281845
+   },
+   "gen_seconds": 282.0881099700928,
+   "discr_gen_vs_test": 0.4391250000000001,
+   "discr_aug_vs_test": 0.497625,
+   "discr_realtrain_vs_test": 0.42437500000000006,
+   "v": {
+    "real": {
+     "flow_MAE": 0.04299267422195257,
+     "flow_MAE_hw": 0.05509120912185896,
+     "val_MAE": 0.018754598006300815,
+     "litres_MAE": null
+    },
+    "gen_rfill_w0.3": {
+     "flow_MAE": 0.029961624027215517,
+     "flow_MAE_hw": 0.0420647886678153,
+     "val_MAE": 0.014955782339520052,
+     "litres_MAE": null,
+     "n_syn": 70306
+    },
+    "physonly": {
+     "flow_MAE": 0.020839851418875243,
+     "flow_MAE_hw": 0.029244657039225925,
+     "val_MAE": 0.013007490821950463,
+     "litres_MAE": null
+    },
+    "hyb_resid_w0.3": {
+     "flow_MAE": 0.02065436246751635,
+     "flow_MAE_hw": 0.0280943854335407,
+     "val_MAE": 0.012747250868007695,
+     "litres_MAE": null,
+     "n_syn": 70306
+    },
+    "hyb_feat_real": {
+     "flow_MAE": 0.03225783178508866,
+     "flow_MAE_hw": 0.04669181576066779,
+     "val_MAE": 0.015997200848932955,
+     "litres_MAE": null
+    },
+    "hyb_feat_w0.3": {
+     "flow_MAE": 0.02407638930153805,
+     "flow_MAE_hw": 0.034630158433820876,
+     "val_MAE": 0.012570296160774846,
+     "litres_MAE": null,
+     "n_syn": 70306
+    },
+    "genphys_rfill_w0.3": {
+     "flow_MAE": 0.029767750643636536,
+     "flow_MAE_hw": 0.04175643508209321,
+     "val_MAE": 0.015660670022310693,
+     "litres_MAE": null,
+     "n_syn": 70306
+    }
+   },
+   "discr_dq_gen_vs_test": 0.4345000000000001,
+   "discr_boot_ref": 0.46462499999999984,
+   "discr_dq_realtrain_vs_test": 0.42199999999999993,
+   "discr_channels_gen": {
+    "CURRENT": 0.2790007588136255,
+    "VOLTAGE": 0.13012491030519158,
+    "TEMP": 0.35862546439009446,
+    "SOC": 0.19300109991877423
+   },
+   "discr_channels_realtrain": {
+    "CURRENT": 0.07550054930305505,
+    "VOLTAGE": 0.13662559809431174,
+    "TEMP": 0.19512461542457238,
+    "SOC": 0.18662553714919172
+   },
+   "repeat_frac_real": [
+    0.0980399203605339,
+    0.04641083326744629,
+    0.7993344210685202,
+    0.06531442494986595
+   ],
+   "repeat_frac_gen": [
+    0.0003845248845118123,
+    0.0003507381791781384,
+    0.024276954450292314,
+    0.010520536484613976
+   ],
+   "discr_id_gen": 0.41437500000000005,
+   "discr_id_real": 0.38987499999999997,
+   "discr_id_boot": 0.4483750000000001,
+   "success_fidelity_id": true,
+   "success_vs_boot_id": true,
+   "discr_id_dyn_gen": 0.49649999999999994,
+   "discr_id_dyn_real": 0.06412499999999999,
+   "success_fidelity_id_dyn": false,
+   "success_fidelity": true,
+   "auto_choice": "hyb_feat_w0.3",
+   "auto_test_MAE": 0.02407638930153805,
+   "n_val": 1308
+  }
+ ],
+ "upper_bound_100pct_real": {
+  "flow_MAE": 0.014280613833153218,
+  "flow_MAE_hw": 0.017914555721177373,
+  "val_MAE": null,
+  "litres_MAE": null
+ }
+}

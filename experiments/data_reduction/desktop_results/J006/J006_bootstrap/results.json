@@ -1,0 +1,155 @@
+{
+ "meta": {
+  "round": 3,
+  "gen": "bootstrap",
+  "post": "none",
+  "dequant": false,
+  "model": "hgb",
+  "mode": "validation",
+  "test_segments": [
+   15,
+   16,
+   17
+  ],
+  "pool_trips": 151,
+  "iters": 0,
+  "hidden": 24,
+  "latent": 16,
+  "seeds": [
+   0,
+   1
+  ],
+  "fracs": [
+   0.05
+  ],
+  "torch": "2.14.1+cu126",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "audit_limits": {
+   "dspeed": 12.0,
+   "drpm": 1282.25,
+   "idle_lo": 7.7,
+   "idle_hi": 30.897000000000116,
+   "ratio_hi": 0.0950057528922601
+  },
+  "runtime_s": 91.62176203727722
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "frac": 0.05,
+   "n_real": 2983,
+   "n_fill": 55054,
+   "n_syn_audited": 73398,
+   "audit_pass": 0.81475478986746,
+   "gen_log": {
+    "gen": "bootstrap"
+   },
+   "gen_seconds": 0.002000570297241211,
+   "discr_gen_vs_test": 0.30425,
+   "discr_aug_vs_test": 0.485375,
+   "discr_realtrain_vs_test": 0.1329181532136794,
+   "v": {
+    "real": {
+     "flow_MAE": 2.6006392722119966,
+     "litres_MAE": 0.17851463885126387
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 2.5985458973494424,
+     "litres_MAE": 0.2126303089736107,
+     "n_syn": 2983
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 2.6163224020169884,
+     "litres_MAE": 0.18249838024149767,
+     "n_syn": 55054
+    }
+   },
+   "discr_dq_gen_vs_test": 0.30462500000000003,
+   "discr_dq_realtrain_vs_test": 0.12989900606693705,
+   "discr_channels_gen": {
+    "SPEED": 0.22249858490119345,
+    "RPM": 0.2465002264814422,
+    "THROTTLE_POS": 0.1774992867076911,
+    "REAL_FUEL_USAGE_ML_MIN": 0.17087567729952724
+   },
+   "discr_channels_realtrain": {
+    "SPEED": 0.062016897766690615,
+    "RPM": 0.08649121138764881,
+    "THROTTLE_POS": 0.057826260394611695,
+    "REAL_FUEL_USAGE_ML_MIN": 0.04140268121212609
+   },
+   "repeat_frac_real": [
+    0.42871926423647044,
+    0.005626084041452288,
+    0.31914180355346966,
+    0.022708391027416227
+   ],
+   "repeat_frac_gen": [
+    0.458481868360351,
+    0.006187231733597764,
+    0.34502124806149204,
+    0.022660254929348863
+   ],
+   "success_fidelity": false
+  },
+  {
+   "seed": 1,
+   "frac": 0.05,
+   "n_real": 3360,
+   "n_fill": 54677,
+   "n_syn_audited": 69892,
+   "audit_pass": 0.7810645597487791,
+   "gen_log": {
+    "gen": "bootstrap"
+   },
+   "gen_seconds": 0.0,
+   "discr_gen_vs_test": 0.3087500000000001,
+   "discr_aug_vs_test": 0.47862499999999986,
+   "discr_realtrain_vs_test": 0.15803571428571428,
+   "v": {
+    "real": {
+     "flow_MAE": 2.720804733926438,
+     "litres_MAE": 0.35353127082795294
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 2.632987734834269,
+     "litres_MAE": 0.3330885271631298,
+     "n_syn": 3360
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 2.5978042306227627,
+     "litres_MAE": 0.3368921627313881,
+     "n_syn": 54677
+    }
+   },
+   "discr_dq_gen_vs_test": 0.29899999999999993,
+   "discr_dq_realtrain_vs_test": 0.15818452380952386,
+   "discr_channels_gen": {
+    "SPEED": 0.21449930349103974,
+    "RPM": 0.22324956942272678,
+    "THROTTLE_POS": 0.19687481862966683,
+    "REAL_FUEL_USAGE_ML_MIN": 0.1952501623718641
+   },
+   "discr_channels_realtrain": {
+    "SPEED": 0.08169642857142856,
+    "RPM": 0.10193452380952372,
+    "THROTTLE_POS": 0.09285714285714286,
+    "REAL_FUEL_USAGE_ML_MIN": 0.0854166666666667
+   },
+   "repeat_frac_real": [
+    0.3919125258799172,
+    0.004050207039337474,
+    0.28175465838509317,
+    0.0265916149068323
+   ],
+   "repeat_frac_gen": [
+    0.4161843490204763,
+    0.00425252376959234,
+    0.30043433471268716,
+    0.026371743733810425
+   ],
+   "success_fidelity": false
+  }
+ ]
+}

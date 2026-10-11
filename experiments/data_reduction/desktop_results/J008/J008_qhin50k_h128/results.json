@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "round": 3,
+  "gen": "ddpm",
+  "post": "quantholdin",
+  "dequant": true,
+  "model": "hgb",
+  "mode": "validation",
+  "test_segments": [
+   15,
+   16,
+   17
+  ],
+  "pool_trips": 151,
+  "iters": 50000,
+  "hidden": 128,
+  "latent": 16,
+  "seeds": [
+   0,
+   1
+  ],
+  "fracs": [
+   0.05
+  ],
+  "torch": "2.14.1+cu126",
+  "cuda": true,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "audit_limits": {
+   "dspeed": 12.0,
+   "drpm": 1282.25,
+   "idle_lo": 7.7,
+   "idle_hi": 30.897000000000116,
+   "ratio_hi": 0.0950057528922601
+  },
+  "runtime_s": 901.4111533164978
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "frac": 0.05,
+   "n_real": 2983,
+   "n_fill": 55054,
+   "n_syn_audited": 80826,
+   "audit_pass": 0.897209333303732,
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.07021951675415039
+   },
+   "gen_seconds": 308.5094983577728,
+   "discr_gen_vs_test": 0.280875,
+   "discr_aug_vs_test": 0.485375,
+   "discr_realtrain_vs_test": 0.1329181532136794,
+   "v": {
+    "real": {
+     "flow_MAE": 2.6006392722119966,
+     "litres_MAE": 0.17851463885126387
+    },
+    "gen_r0.5_w1": {
+     "flow_MAE": 3.07150847809203,
+     "litres_MAE": 0.6166601631026083,
+     "n_syn": 1491
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 3.2087346164984765,
+     "litres_MAE": 0.7894896632617497,
+     "n_syn": 2983
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 3.1594550579467886,
+     "litres_MAE": 0.9479680462259831,
+     "n_syn": 55054
+    }
+   },
+   "discr_dq_gen_vs_test": 0.2782500000000001,
+   "discr_dq_realtrain_vs_test": 0.12989900606693705,
+   "discr_channels_gen": {
+    "SPEED": 0.16925078663741677,
+    "RPM": 0.17375050549288995,
+    "THROTTLE_POS": 0.18775063094607536,
+    "REAL_FUEL_USAGE_ML_MIN": 0.16549961449867523
+   },
+   "discr_channels_realtrain": {
+    "SPEED": 0.062016897766690615,
+    "RPM": 0.08649121138764881,
+    "THROTTLE_POS": 0.057826260394611695,
+    "REAL_FUEL_USAGE_ML_MIN": 0.04140268121212609
+   },
+   "repeat_frac_real": [
+    0.42871926423647044,
+    0.005626084041452288,
+    0.31914180355346966,
+    0.022708391027416227
+   ],
+   "repeat_frac_gen": [
+    0.42183100788704453,
+    0.005898876706698985,
+    0.3123220143324522,
+    0.008080159311629169
+   ],
+   "success_fidelity": false
+  },
+  {
+   "seed": 1,
+   "frac": 0.05,
+   "n_real": 3360,
+   "n_fill": 54677,
+   "n_syn_audited": 81389,
+   "audit_pass": 0.9095470648056055,
+   "gen_log": {
+    "device": "cuda",
+    "gen": "ddpm",
+    "steps": 200,
+    "loss": 0.07684548199176788
+   },
+   "gen_seconds": 306.18316864967346,
+   "discr_gen_vs_test": 0.26875000000000004,
+   "discr_aug_vs_test": 0.47862499999999986,
+   "discr_realtrain_vs_test": 0.15803571428571428,
+   "v": {
+    "real": {
+     "flow_MAE": 2.720804733926438,
+     "litres_MAE": 0.35353127082795294
+    },
+    "gen_r0.5_w1": {
+     "flow_MAE": 2.9654080214890013,
+     "litres_MAE": 0.5298299804142298,
+     "n_syn": 1680
+    },
+    "gen_r1_w1": {
+     "flow_MAE": 2.9532936791937554,
+     "litres_MAE": 0.5113343597314236,
+     "n_syn": 3360
+    },
+    "gen_rfill_w1": {
+     "flow_MAE": 2.9001259585913197,
+     "litres_MAE": 0.4261107533016381,
+     "n_syn": 54677
+    }
+   },
+   "discr_dq_gen_vs_test": 0.271,
+   "discr_dq_realtrain_vs_test": 0.15818452380952386,
+   "discr_channels_gen": {
+    "SPEED": 0.1814983648424292,
+    "RPM": 0.1801240055045632,
+    "THROTTLE_POS": 0.19412403719602567,
+    "REAL_FUEL_USAGE_ML_MIN": 0.1839983336666563
+   },
+   "discr_channels_realtrain": {
+    "SPEED": 0.08169642857142856,
+    "RPM": 0.10193452380952372,
+    "THROTTLE_POS": 0.09285714285714286,
+    "REAL_FUEL_USAGE_ML_MIN": 0.0854166666666667
+   },
+   "repeat_frac_real": [
+    0.3919125258799172,
+    0.004050207039337474,
+    0.28175465838509317,
+    0.0265916149068323
+   ],
+   "repeat_frac_gen": [
+    0.38422081394398455,
+    0.004241038875566456,
+    0.2761605964271424,
+    0.008380579151012289
+   ],
+   "success_fidelity": false
+  }
+ ]
+}

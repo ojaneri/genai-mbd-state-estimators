@@ -1,10 +1,8 @@
-# Generative AI and ML-based MBD for automotive state estimators — code, results and pre-registrations
+# Physics-Guided Generative AI for automotive state estimation — code, results and preregistrations
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23190825.svg)](https://doi.org/10.5281/zenodo.23190825)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23190824.svg)](https://doi.org/10.5281/zenodo.23190824)
 
-Companion repository of the paper *"A Generative-AI and Machine-Learning Model-Based Design Pipeline for Agile Development
-of Automotive State Estimators: Fuel-Level, Battery-Cell and Field BESS Case Studies"* (R. S. Dominguez, O. Janeri Filho,
-M. M. Dias Santos; Federal Technological University of Paraná — Ponta Grossa).
+Companion repository of the paper *"Physics-Guided Generative AI for Automotive State Estimation and Embedded Deployment"* (Rafael Santos Dominguez, Osvaldo Janeri Filho, Jeferson José de Lima, Max Mauro Dias Santos; Federal Technological University of Paraná — Ponta Grossa).
 
 It contains everything behind Section V of the paper (evaluation of the generative stage on public data) and the
 context-gating test of Section IV. The OEM data, the Simulink model and the in-vehicle code of the fuel-level case study
@@ -18,17 +16,19 @@ are confidential and are **not** included; the bench-measured tank curves are re
 | `experiments/data_reduction/run.py`, `run2.py` | Earlier rounds (TimeGAN round 1, generator grid of round 2). |
 | `experiments/data_reduction/gens.py`, `timegan.py`, `timevae.py` | Generators: DDPM (1-D), TimeGAN, recurrent VAE, VAR, block bootstrap. |
 | `experiments/data_reduction/tools/convert_*.py` | Converters of the public datasets to the common input format. |
-| `experiments/data_reduction/tools/cross_domain.py` | Table III and Fig. 4 of the paper → `cross_domain.json`, `cross_domain.pdf`. |
+| `experiments/data_reduction/tools/cross_domain.py` | Cross-domain table and figure → `cross_domain.json`, `cross_domain.pdf`. |
+| `experiments/data_reduction/tools/paper_figs.py` | Evidence figures and tables: per-seed changes, battery curves, gate choices, fidelity vs. utility, statistics (95% CI, effect size), audit tiers, data equivalence, distance to the all-data model, per-channel detectability. |
+| `experiments/data_reduction/tools/battery_table.py`, `gate_summary.py`, `fid_vs_utility.py`, `analyze_d0030.py` | Battery candidates table, utility-gate summary, fidelity–utility correlation, preregistered analysis of round 11. |
 | `experiments/data_reduction/tools/fig_curve.py`, `fig_vf_curves.py` | Vehicle-1 learning curve; Fig. 2 (tank curves). |
 | `experiments/data_reduction/desktop_results/Jxxx/` | Per-job outputs: `results.json` (every seed, fraction and variant), logs, `REPORT.md`. |
 | `experiments/opel_refuel/` | Context gating of refuel detection (Opel and Itabira), with results. |
 | `data/thesis_vf_curves/` | Resistance-to-volume curves of 24 tanks and envelopes, from the thesis appendix (CC BY 4.0). |
-| `PREREGISTRATION.md` | Hypotheses, outcomes and decision rules recorded before each run (d-0005 – d-0021). |
+| `PREREGISTRATION.md` | Hypotheses, outcomes and decision rules recorded before each run (d-0005 – d-0033). |
 | `REPRODUCE.md` | The exact command of every job J001–J035c. |
 
 Job ↔ paper: vehicle 1 (Opel) J009, J012, J014, J015, J016, J017, J018, J019, J024, J026, J031; vehicle 2 (Itabira) J013,
 J025, J028; battery cell (LG 18650HG2) J020b, J021, J022, J023, J027, J029, J030; field BESS SOC J032b, J033b, J034b;
-BESS cell temperature J035c; TimeGAN round 1 `desktop_results/20260930-2207`. Jobs with a later letter (J020→J020b,
+BESS cell temperature J035c; round 11 (d-0030, d-0032, d-0033): J038 (MLP, seeds 3–4), J039 and J040 (bootstrap controls for vehicle 2 and BESS temperature), J044 (failed, see its report; re-run as J044r); TimeGAN round 1 `desktop_results/20260930-2207`. Jobs J036, J037, J041–J043 and J044r are queued and will be added in a later version. Jobs with a later letter (J020→J020b,
 J032→J032b, …) replace failed runs; the failure reports are kept.
 
 ## Data (not redistributed — download from the sources)
@@ -66,7 +66,7 @@ Measurement in Passenger Vehicles*, MEng thesis, UTFPR, 2026 (CC BY 4.0).
 
 ## Citation
 
-See `CITATION.cff`. Please cite the paper and this archive: doi:10.5281/zenodo.23190825 (v1.0.0; all versions: doi:10.5281/zenodo.23190824).
+See `CITATION.cff`. Please cite the paper and this archive: doi:10.5281/zenodo.23190824 (all versions; v1.0.0: doi:10.5281/zenodo.23190825).
 
 ## Acknowledgment
 
